@@ -1,0 +1,43 @@
+<!-- Showing for your cart-->
+
+<%= form_for @cart, url: {action: :update} do |f| %>
+    <h1> Hello <%= current_user.name %> </h1>
+    <p>Here is your cart </p>
+    <% positions = 0 %>
+    <% total_price = 0.0 %>
+    <table>
+      <tr>
+        <td><b>Position:</b></td>
+        <td><b>Name:</b></td>
+        <td><b>Type:</b></td>
+        <td><b>Quantity:</b></td>
+        <td><b>Total price:</b></td>
+        <td></td>
+      </tr>
+      <% @cart.positions.each do |elem| %>
+          <% positions += 1 %>
+          <% item = Item.find(elem.item_id).good %>
+          <% %>
+          <tr>
+            <td><%= positions %></td>
+            <td><%= item.name %></td>
+            <td><%= item.class %></td>
+            <!-- Next element allow to send params[:position] = { {"Position_1.id" => "Position_1.quantity} ,{"Position_2.id" => "Position_2.quantity} , ...} -->
+            <td><input  name="position[][<%= elem.id %>]" type="text" value="<%= elem.quantity %>" /> </td>
+            <td><%= total_price += elem.quantity * item.price %></td>
+            <td><%= link_to "Delete" , remove_position_path + "?position_id=#{elem.id}" , class: 'btn btn-large' %></td>
+          </tr>
+      <% end %>
+      <tr>
+        <td><b>Total positions: <%= @cart.get_total_positions  %> </b></td>
+        <td></td>
+        <td></td>
+        <td><b>Total items: <%= @cart.get_total_items %></b></td>
+        <td><b>Order price: <%= @cart.get_total_price %></b></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <input type="button" value="Go to order registration" onclick="location.href='/checkout'" class="btn btn-large"> <!-- location.href='/checkout'" > -->
+
+<% end %>

@@ -1,0 +1,63 @@
+<%= form_for @item , url: {action: :create} do |f| %>
+    <% if @item.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@item.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+          <ul>
+            <% @item.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <%= f.hidden_field :type, value: "#{@item.class.to_s}"%>
+
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :manufacturer %>
+      <%= f.text_field :manufacturer %>
+    </div>
+
+    <div class="field">
+      <%= f.label :price %>
+      <%= f.number_field :price %>
+    </div>
+
+    <div class="field">
+      <%= f.label :length %>
+      <%= f.number_field :length %>
+    </div>
+
+    <div class="field">
+      <%= f.label :deflection %>
+      <select id="snowboard_deflection" name="snowboard[deflection]">
+        <% (1..10).each do |elem| %>
+            <option> <%= elem %> </option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="field">
+      <%= f.label :form %>
+      <p>
+        <select id="snowboard_form" name="snowboard[form]">
+            <option> Directional </option>
+            <option> Twin_Tip </option>
+            <option> Swallow_tail </option>
+            <option> All_mountan </option>
+        </select>
+      </p>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.text_area :description ,size: '20x5' %>
+    </div>
+
+    <%= f.submit 'Add snowboard' %>
+<% end %>

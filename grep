@@ -1,0 +1,22 @@
+Usage: heroku config
+
+ display the config vars for an app
+
+ -s, --shell  # output config vars in shell format
+
+Examples:
+
+ $ heroku config
+ A: one
+ B: two
+
+ $ heroku config --shell
+ A=one
+ B=two
+
+Additional commands, type "heroku help COMMAND" for more details:
+
+  config:get KEY                            #  display a config value for an app
+  config:set KEY1=VALUE1 [KEY2=VALUE2 ...]  #  set one or more config vars
+  config:unset KEY1 [KEY2 ...]              #  unset one or more config vars
+

@@ -1,0 +1,24 @@
+<h1 class="logo"> Welcome to SnowFlow</h1>
+<!-- navigation -->
+<ul class="nav-bar">
+  <li> <%= link_to 'Catalogue', catalogue_path %> </li>
+  <li> <%= link_to 'Home', root_path %> </li>
+  <li> <%= link_to 'Contacts', contacts_path %> </li>
+  <li> <%= link_to 'About' , about_path %> </li>
+       <% if signed? %>
+            <li><%= link_to 'Sign out', signout_path, method: :delete %></li>
+            <li><%= link_to 'Profile' , user_path(current_user) %> </li>
+            <% if current_user.admin? %>
+                <li><%= link_to 'New item', new_item_path %></li>
+            <% end %>
+       <% else %>
+            <li> <%= link_to 'Sign in', signin_path %> </li>
+       <% end %>
+</ul>
+
+<!-- cart -->
+<%= render partial: 'shared/cart' , locals: {cart: current_cart } %>
+<!-- welcome -->
+<% if signed? %>
+    <p> You signed as: <%= current_user.login %> </p>
+<% end %>

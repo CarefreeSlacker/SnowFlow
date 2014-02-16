@@ -1,0 +1,8 @@
+<!-- Render special form for every of goods, named _index_"model_name".html.erb from shared/ -->
+<h1> Here you can see all our snowboards </h1>
+<ul class="content" >
+  <% @items.each do |elem| %>
+      <%= render partial: partial_helper(elem.good.class.to_s,'index') , locals: {item_reference: elem} %>
+  <% end %>
+</ul>
+

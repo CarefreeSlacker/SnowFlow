@@ -1,0 +1,46 @@
+<!-- show form for snowboards -->
+
+<% item = item_reference.good %>
+<h1> <%= label_tag item.name %> </h1>
+<table>
+
+    <tr>
+      <td><%= label_tag "Manufacturer"%></td>
+      <td><%= label_tag item.manufacturer %></td>
+    </tr>
+
+    <tr>
+      <td><%= label_tag :price %></td>
+      <td><%= label_tag :price , item.price %></td>
+    </tr>
+
+    <tr>
+      <td><%= label_tag :length %></td>
+      <td><%= label_tag :length , item.length %></td>
+    </tr>
+
+    <tr>
+      <td><%= label_tag :deflection %></td>
+      <td><%= label_tag :deflection , item.deflection %></td>
+    </tr>
+
+    <tr>
+      <td><%= label_tag :form %></td>
+      <td><%= label_tag :form , item.form %></td>
+    </tr>
+
+</table>
+
+<%= label_tag :description %><br>
+<%= text_area_tag :description , item.description , size: '20x5', disabled: 'false' %>
+<br>
+
+<%= link_to 'Add to cart' , '#' , class: 'btn btn-large' %> <br>
+
+<% if current_user %>
+    <% if current_user.admin? %>
+        <%= link_to 'Edit', edit_item_path(item_reference) , class: 'btn btn-large'%>
+    <% end %>
+<% end %>
+
+

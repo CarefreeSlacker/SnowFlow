@@ -1,0 +1,55 @@
+
+
+
+<p>
+  <strong>User:</strong>
+  <% User.find(@order.user_id).name %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @order.country %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @order.region %>
+</p>
+
+<p>
+  <strong>Post code:</strong>
+  <%= @order.post_code %>
+</p>
+
+<p>
+  <strong>Lane:</strong>
+  <%= @order.lane %>
+</p>
+
+<p>
+  <strong>Home:</strong>
+  <%= @order.home %>
+</p>
+
+<p>
+  <strong>Appartament:</strong>
+  <%= @order.appartament %>
+</p>
+
+<p>
+  <strong>Floor:</strong>
+  <%= @order.floor %>
+</p>
+
+<p>
+  <strong>Personal payment:</strong>
+  <%= @order.personal_payment %>
+</p>
+
+<p>
+  <strong>Shipped:</strong>
+  <%= @order.shipped %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

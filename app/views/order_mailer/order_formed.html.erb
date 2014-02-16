@@ -1,0 +1,38 @@
+<p>Good day <%= @user.name %> </p>
+<p> We are happy to notice you that your order (number: <%= @order.id %>, date: <%= @order.created_at %>) has succesfully formed. </p>
+<hr>
+Cart id <%= @cart.id %>
+<b> Order list: </b>
+<table>
+  <tr>
+    <td><b>Position:</b></td>
+    <td><b>Name:</b></td>
+    <td><b>Type:</b></td>
+    <td><b>Quantity:</b></td>
+    <td><b>Total price:</b></td>
+  </tr>
+  <% positions = 0 %>
+  <% @cart.positions.each do |elem| %>
+      <% positions += 1 %>
+      <% item = Item.find(elem.item_id).good %>
+      <% %>
+      <tr>
+        <td><%= positions %></td>
+        <td><%= item.name %></td>
+        <td><%= item.class %></td>
+        <!-- Next element allow to send params[:position] = { {"Position_1.id" => "Position_1.quantity} ,{"Position_2.id" => "Position_2.quantity} , ...} -->
+        <td><input  name="position[][<%= elem.id %>]" type="text" value="<%= elem.quantity %>" /> </td>
+        <td><%=  elem.quantity * item.price %></td>
+      </tr>
+  <% end %>
+  <tr>
+    <td><b>Total positions: <%= @cart.get_total_positions  %> </b></td>
+    <td></td>
+    <td></td>
+    <td><b>Total items: <%= @cart.get_total_items %></b></td>
+    <td><b>Order price: <%= @cart.get_total_price %></b></td>
+  </tr>
+</table>
+<hr>
+<p> Your addres: <%= "#{@order.country} , #{@order.city} , #{@order.lane} , #{@order.lane} , #{@order.home} , #{@order.appartament} " %></p>
+<p> Order will be delivered during one week. </p>

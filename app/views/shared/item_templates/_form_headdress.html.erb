@@ -1,0 +1,47 @@
+<%= form_for @item , url: {action: :create} do |f| %>
+    <% if @item.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+          <ul>
+            <% @item.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <%= f.hidden_field :type, value: "#{@item.class.to_s}"%>
+
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :manufacturer %>
+      <%= f.text_field :manufacturer %>
+    </div>
+
+    <div class="field">
+      <%= f.label :price %>
+      <%= f.number_field :price %>
+    </div>
+
+    <div class="field">
+      <%= f.label :warmnes %>
+      <%= f.number_field :warmnes %>
+    </div>
+
+    <div class="field">
+      <%= f.label :collection %>
+      <%= f.text_field :collection %>
+    </div>
+
+    <div class="field">
+      <%= f.label :matherial %>
+      <%= f.text_field :matherial %>
+    </div>
+
+
+    <%= f.submit 'Add headdress' %>
+<% end %>

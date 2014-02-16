@@ -1,0 +1,13 @@
+<!-- this form used in user signing up -->
+<% if @user.errors.any?  %>
+    <div class="error_explanation">
+      <div class="allert allert-error">
+        The form contains <%= pluralize(@user.errors.count, 'error' ) %>
+      </div>
+      <ul>
+        <% @user.errors.each do |field , message| %>
+            <li> * <%="#{field} #{message} "%> </li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>

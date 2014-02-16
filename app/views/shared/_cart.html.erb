@@ -1,0 +1,10 @@
+<!-- partial for showing of cart -->
+<aside class="cart">
+  <p>In <% if signed? %>
+            <%= link_to 'Your cart', edit_cart_path(current_cart.id) %>
+        <% else %>
+            Your cart
+        <% end %> <%= cart.get_total_positions %> positions  </p>
+  <p> It's include <%= cart.get_total_items %> items , costs: <%= cart.get_total_price %> </p>
+</aside>
+

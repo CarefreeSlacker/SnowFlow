@@ -1,0 +1,41 @@
+<!-- show form for headdress -->
+
+<% item = item_reference.good %>
+<h1> <%= label_tag item.name %> </h1>
+<table>
+
+  <tr>
+    <td><%= label_tag "Manufacturer"%></td>
+    <td><%= label_tag item.manufacturer %></td>
+  </tr>
+
+  <tr>
+    <td><%= label_tag :price %></td>
+    <td><%= label_tag :price , item.price %></td>
+  </tr>
+
+  <tr>
+    <td><%= label_tag :warmnes %></td>
+    <td><%= label_tag :warmnes , item.warmnes %></td>
+  </tr>
+
+  <tr>
+    <td><%= label_tag :collection %></td>
+    <td><%= label_tag :collection , item.collection %></td>
+  </tr>
+
+  <tr>
+    <td><%= label_tag :matherial %></td>
+    <td><%= label_tag :matherial , item.matherial %></td>
+  </tr>
+
+</table>
+
+
+<%= link_to 'Add to cart' , add_to_cart_path + "?item_id=#{item.id}&item_type=#{item.class}&quantity=1" , class: 'btn btn-large' %> <br>
+
+<% if current_user %>
+    <% if current_user.admin? %>
+        <%= link_to 'Edit', edit_item_path(item_reference) , class: 'btn btn-large'%>
+    <% end %>
+<% end %>

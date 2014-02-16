@@ -1,0 +1,55 @@
+<!-- Edit form for headdresses -->
+<%= form_for @item , url: {action: :update} do |f| %>
+    <br>
+    <% if @item.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+          <ul>
+            <% @item.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <br>
+    <b><%= f.text_field  :name , size: "20x1"%></b>
+    <br>
+    <br>
+    <table>
+
+      <tr>
+        <td><%= f.label "Manufacturer"%></td>
+        <!-- next field passes params[:item][:manufacturer] = value -->
+        <td><%= f.text_field  :manufacturer %></td>
+      </tr>
+
+      <tr>
+        <td><%= f.label :price %></td>
+        <td><%= f.text_field  :price %></td>
+      </tr>
+
+      <tr>
+        <td><%= f.label :warmnes %></td>
+        <td><%= f.text_field  :warmnes %></td>
+      </tr>
+
+      <tr>
+        <td><%= f.label :collection %></td>
+        <td><%= f.text_field  :collection%></td>
+      </tr>
+
+      <tr>
+        <td><%= f.label :matherial %></td>
+        <td><%= f.text_field :matherial %></td>
+      </tr>
+
+
+    </table>
+
+
+    <input type="submit" class="btn btn-large" value="Save changes" >
+    <br>
+    <br>
+
+<% end %>

@@ -1,0 +1,9 @@
+<p> Choose category </p>
+<ul>
+  <% @categories.each do |elem| %>
+      <li> <%= link_to elem.name , new_item_path + "?category=#{elem.name}"%> </li>
+  <% end %>
+</ul>
+
+
+

@@ -1,0 +1,10 @@
+
+<%= form_for @user, url: user_path.to_s  do |f| %>
+    <p> Name: <%= @user.name %> </p>
+    <p> Login: <%= @user.login %> </p>
+    <p> Email: <%= @user.email %> </p> <!--  _field :email %> </p> -->
+    <% if current_user.id == @user.id %>
+        <p> <%= link_to 'Edit your profile', edit_user_path(@user) %> </p>
+    <% end %>
+
+<% end %>

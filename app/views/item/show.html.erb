@@ -1,0 +1,2 @@
+<!-- Render special form for every of goods, named _show_"model_name".html.erb from shared/ -->
+<%= render partial: partial_helper(@item.good.class.to_s, 'show'), locals: {item_reference: @item} %>

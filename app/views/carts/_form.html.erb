@@ -1,0 +1,44 @@
+<%= form_for @cart, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :user_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :user_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :total_price, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :total_price, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :total_positions, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :total_positions, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :total_items, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :total_items, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :order_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :order_id, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :checkouted, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :checkouted, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                carts_path, :class => 'btn' %>
+  </div>
+<% end %>

@@ -12,6 +12,25 @@ gem 'thin'
 #gem 'safe_attributes'
 gem 'actionmailer'
 
+#bootstrap
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+
+#installing:
+# console: rails g bootstrap:install
+# console: rails g bootstrap:layout application [fixed]
+# gem install commonjs -v 0.2.7
+# gem install less -v 2.4.0
+# gem install less-rails -v 2.4.2
+# gem install libv8 -v 3.16.14.3
+# gem install ref -v 1.0.5
+# gem install therubyracer -v 0.12.1
+# gem install twitter-bootstrap-rails -v 2.2.8
+# console: rails g scaffold [name, fields]
+# stylesheets/bootstrap and overrides.css.loss + body { padding-top: 60px;}
+# console: rails g bootstrap:themed [articles -f]
+
 
 # additional gem for using sql-queries in ActiveRecord
 gem 'arel'

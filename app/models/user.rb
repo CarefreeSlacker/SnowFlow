@@ -15,17 +15,17 @@ class User < ActiveRecord::Base
   #validations
   validates :name, presence: true
   validates :login, presence: true, uniqueness: { case_sentensive: false}
-  #validates :password, presence: true   # have to comment because i couldn't log in because of that
-  #validates :password_confirmation, presence: true # have to comment because i couldn't log in because of that
+  validates :password, presence: true, length: {minimum: 6}   # have to comment because i couldn't log in because of that
+  validates :password_confirmation, presence: true # have to comment because i couldn't log in because of that
   validates :email, presence: true, format: {with: User::EmailRegex},
             uniqueness: { case_sentensive: false}
   validates :role, presence: true
-  validates :name, presence: true
+
 
 
   #callbacks
-  before_save {self.email = email.downcase}
-  before_create {self.email = email.downcase}
+  #before_save {self.email = email.downcase}
+  #before_create {self.email = email.downcase}
 
 
   def self.new_token

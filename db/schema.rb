@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140216070414) do
+ActiveRecord::Schema.define(version: 20140218091524) do
 
   create_table "carts", force: true do |t|
     t.integer  "user_id"
@@ -104,14 +104,11 @@ ActiveRecord::Schema.define(version: 20140216070414) do
     t.string   "login"
     t.string   "email"
     t.string   "password"
-    t.string   "password_confirmation"
     t.string   "password_digest"
     t.string   "remember_token"
-    t.string   "role",                  default: "customer"
+    t.string   "role",            default: "customer"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
 end

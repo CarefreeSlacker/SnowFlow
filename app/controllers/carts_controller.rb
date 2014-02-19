@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
   #filters
   before_filter :set_cart, only: [:edit, :update]
+  before_filter :signed_filter
 
 
 

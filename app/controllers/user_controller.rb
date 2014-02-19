@@ -69,16 +69,16 @@ class UserController < ApplicationController
       end
     end
 
-    def signed_filter
-      render 'shared/invite' unless current_user
-    end
+    #def signed_filter
+    #  render 'shared/invite' unless current_user
+    #end
 
 
     def user_params
       params.require(:user).permit(:name,:login,:email,:password, :password_confirmation)
     end
 
-    def admin_filter
-      render 'shared/error_303' unless current_user.admin?
-    end
+    #def admin_filter
+    #  render 'shared/error_303' unless current_user.admin?
+    #end
 end

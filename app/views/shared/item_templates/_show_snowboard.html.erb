@@ -35,7 +35,7 @@
 <%= text_area_tag :description , item.description , size: '20x5', disabled: 'false' %>
 <br>
 
-<%= link_to 'Add to cart' , '#' , class: 'btn btn-large' %> <br>
+<%= link_to 'Add to cart' , add_to_cart_path + "?item_id=#{item.id}&item_type=#{item.class}&quantity=1" , class: 'btn btn-large' %> <br>
 
 <% if current_user %>
     <% if current_user.admin? %>

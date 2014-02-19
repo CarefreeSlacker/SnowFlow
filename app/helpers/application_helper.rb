@@ -8,4 +8,20 @@ module ApplicationHelper
     #2 - shoud named like _"action"_"model".html.erb
     "shared/item_templates/#{action}_#{type.downcase}"
   end
+
+  def signed_filter
+    unless signed?
+      render 'shared/invite'
+    end
+  end
+
+  def admin_filter
+    if signed?
+      unless current_user.admin?
+        render 'shared/error_303'
+      end
+    else
+      render 'shared/invite'
+    end
+  end
 end

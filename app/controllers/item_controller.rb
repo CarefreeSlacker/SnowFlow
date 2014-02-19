@@ -1,6 +1,7 @@
 class ItemController < ApplicationController
   #filters
   before_filter :set_item, only: [:update , :destroy, :edit, :show ]
+  before_filter :admin_filter, only: [:new,:create,:edit,:update,:destroy]
 
 
   #actions

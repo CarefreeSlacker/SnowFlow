@@ -53728,3 +53728,6 @@ Processing by ItemController#index as HTML
   Rendered layouts/_header.html.erb (5.0ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 93ms (Views: 89.3ms | ActiveRecord: 2.3ms)
+  [1m[36mItem Load (2.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mItem Load (0.6ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items"[0m

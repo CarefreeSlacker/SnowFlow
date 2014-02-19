@@ -9,7 +9,7 @@ gem 'bootstrap-will_paginate'
 gem 'faker'
 gem 'mail'
 gem 'thin'
-#gem 'safe_attributes'
+gem 'safe_attributes'
 gem 'actionmailer'
 
 

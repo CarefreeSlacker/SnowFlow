@@ -4,7 +4,8 @@ module SessionHelper
   def sign_in(user,password)
     token = User.new_token #creating new token for session
     cookies.permanent[:token] = token #saving token in cookies
-    user.update_attributes!(remember_token: User.encrypt(token)) #writing encrypted session token in database
+    user.remember_token =  User.encrypt(token) #writing encrypted session token in database
+    user.save
     current_user = user #seting current user
     new_cart =  Cart.create(user_id: user.id) #setting its cart
     current_user.carts << new_cart

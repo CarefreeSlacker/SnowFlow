@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  #accessors
+  #attr_accessible :name, :login, :email, :password, :password_confirmation
   #propereties
   has_many :carts
   has_many :positions, through: :carts
@@ -15,8 +17,8 @@ class User < ActiveRecord::Base
   #validations
   validates :name, presence: true
   validates :login, presence: true, uniqueness: { case_sentensive: false}
-  validates :password, presence: true, length: {minimum: 6}   # have to comment because i couldn't log in because of that
-  validates :password_confirmation, presence: true # have to comment because i couldn't log in because of that
+  #validates :password, length: {minimum: 6 }  # have to comment because i couldn't log in because of that
+  #validates :password_confirmation # have to comment because i couldn't log in because of that
   validates :email, presence: true, format: {with: User::EmailRegex},
             uniqueness: { case_sentensive: false}
   validates :role, presence: true

@@ -49159,3 +49159,2495 @@ ActiveRecord::DangerousAttributeError (changed is defined by Active Record):
   Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
   Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
   Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-02-19 12:09:59 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (354.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'b7a3b9141874c2d47f63319b5b55d95a04fecbc5' LIMIT 1
+  [1m[36mCart Load (12.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1[0m  [["user_id", 3]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 129]]
+  [1m[36mPosition Load (0.2ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 129]]
+  Rendered shared/_cart.html.erb (29.8ms)
+  Rendered layouts/_header.html.erb (372.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 2526ms (Views: 2493.5ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:03 +0400
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/_cart.html.erb (18.4ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (23.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:06 +0400
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/_cart.html.erb (1.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 57.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:10:09 +0400
+
+
+Started POST "/session" for 127.0.0.1 at 2014-02-19 12:10:16 +0400
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "session"=>{"email"=>"Struan", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'Struan' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."login" = 'Struan' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'struan.dirk.29@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 232ms
+
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Password is too short (minimum is 6 characters), Password confirmation can't be blank):
+  app/helpers/session_helper.rb:7:in `sign_in'
+  app/controllers/session_controller.rb:23:in `create'
+
+
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.1ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2014-02-19 12:13:37 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "session"=>{"email"=>"Struan", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 20ms
+
+RuntimeError (`attr_accessible` is extracted out of Rails into a gem. Please use new recommended protection model for params(strong_parameters) or add `protected_attributes` to your Gemfile to use old one.):
+  app/models/user.rb:4:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/session_controller.rb:12:in `create'
+
+
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2014-02-19 12:16:40 +0400
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "session"=>{"email"=>"Struan", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'Struan' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."login" = 'Struan' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'struan.dirk.29@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 511ms
+
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Password is too short (minimum is 6 characters), Password confirmation can't be blank):
+  app/helpers/session_helper.rb:7:in `sign_in'
+  app/controllers/session_controller.rb:23:in `create'
+
+
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.8ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2014-02-19 12:17:01 +0400
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "session"=>{"email"=>"Struan", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."login" = 'Struan' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'Struan' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'struan.dirk.29@gmail.com' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 422 Unprocessable Entity in 146ms
+
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Password confirmation can't be blank):
+  app/helpers/session_helper.rb:7:in `sign_in'
+  app/controllers/session_controller.rb:23:in `create'
+
+
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2014-02-19 12:19:12 +0400
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "session"=>{"email"=>"Struan", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'Struan' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."login" = 'Struan' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'struan.dirk.29@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 87ms
+
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Password confirmation can't be blank):
+  app/helpers/session_helper.rb:7:in `sign_in'
+  app/controllers/session_controller.rb:23:in `create'
+
+
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-19 12:20:10 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (3.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/_cart.html.erb (86.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (177.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 328ms (Views: 304.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:11 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:11 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:11 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:11 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:11 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:11 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:11 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:11 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:11 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:11 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:11 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:11 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:12 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:12 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:12 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:12 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:12 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:12 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:12 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:12 +0400
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-02-19 12:20:13 +0400
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (320.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/_cart.html.erb (1.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 336ms (Views: 335.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:20:14 +0400
+
+
+Started POST "/session" for 127.0.0.1 at 2014-02-19 12:20:20 +0400
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "session"=>{"email"=>"struan.dirk.29@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'struan.dirk.29@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."login" = 'Struan' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'struan.dirk.29@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 143ms
+
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Password confirmation can't be blank):
+  app/helpers/session_helper.rb:7:in `sign_in'
+  app/controllers/session_controller.rb:23:in `create'
+
+
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'New_user1' AND "users"."id" != 3) LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'new@gmail.com' AND "users"."id" != 3) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'New_user1' AND "users"."id" != 3) LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'new@gmail.com' AND "users"."id" != 3) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/catalogue" for 127.0.0.1 at 2014-02-19 12:22:46 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemController#index as HTML
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mSnowboard Load (29.6ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/item_templates/_index_snowboard.html.erb (48.0ms)
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.9ms)
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.7ms)
+  [1m[36mHeaddress Load (0.2ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/item_templates/_index_headdress.html.erb (1.7ms)
+  [1m[36mHeaddress Load (0.2ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/item_templates/_index_headdress.html.erb (0.9ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/item_templates/_index_headdress.html.erb (0.9ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/item_templates/_index_headdress.html.erb (0.9ms)
+  [1m[36mHeaddress Load (0.2ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/item_templates/_index_headdress.html.erb (0.9ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/item_templates/_index_headdress.html.erb (2.3ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/item_templates/_index_headdress.html.erb (0.9ms)
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.8ms)
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.8ms)
+  Rendered item/index.html.erb within layouts/application (247.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered shared/_cart.html.erb (53.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (60.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 500ms (Views: 399.2ms | ActiveRecord: 34.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:22:48 +0400
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-02-19 12:22:51 +0400
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (312.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered shared/_cart.html.erb (2.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (6.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 361ms (Views: 359.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-02-19 12:22:59 +0400
+Processing by UserController#new as HTML
+  Rendered shared/_error_messages.html.erb (3.4ms)
+  Rendered user/new.html.erb within layouts/application (31.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered shared/_cart.html.erb (1.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (6.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:00 +0400
+
+
+Started POST "/user" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "user"=>{"name"=>"Another", "login"=>"Another", "email"=>"Another@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'Another' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'Another@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered shared/_error_messages.html.erb (1.4ms)
+  Rendered user/new.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered shared/_cart.html.erb (1.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 150ms (Views: 19.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:23:19 +0400
+
+
+Started POST "/user" for 127.0.0.1 at 2014-02-19 12:31:37 +0400
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "user"=>{"name"=>"Another", "login"=>"Another", "email"=>"Another@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+Completed 500 Internal Server Error in 8ms
+
+ArgumentError (You need to supply at least one validation):
+  app/models/user.rb:21:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/user_controller.rb:15:in `create'
+
+
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (38.2ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (51.7ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "user"=>{"name"=>"Another", "login"=>"Another", "email"=>"Another@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'Another' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'Another@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered shared/_error_messages.html.erb (1.4ms)
+  Rendered user/new.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered shared/_cart.html.erb (12.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (20.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 143ms (Views: 35.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:31:55 +0400
+
+
+Started POST "/user" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "user"=>{"name"=>"Another", "login"=>"Another", "email"=>"Another@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'Another' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'Another@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered shared/_error_messages.html.erb (1.4ms)
+  Rendered user/new.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered shared/_cart.html.erb (1.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 21.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:06 +0400
+
+
+Started POST "/user" for 127.0.0.1 at 2014-02-19 12:32:33 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "user"=>{"name"=>"Another", "login"=>"Another", "email"=>"Another@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'Another' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'Another@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_error_messages.html.erb (1.9ms)
+  Rendered user/new.html.erb within layouts/application (49.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/_cart.html.erb (60.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (104.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 789ms (Views: 284.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:35 +0400
+
+
+Started POST "/user" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "user"=>{"name"=>"Another", "login"=>"Another", "email"=>"Another@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'Another' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'Another@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_error_messages.html.erb (1.2ms)
+  Rendered user/new.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/_cart.html.erb (1.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 109ms (Views: 19.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:32:44 +0400
+
+
+Started POST "/user" for 127.0.0.1 at 2014-02-19 12:36:26 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "user"=>{"name"=>"Another", "login"=>"Another", "email"=>"Another@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'Another' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'Another@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_error_messages.html.erb (1.7ms)
+  Rendered user/new.html.erb within layouts/application (51.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/_cart.html.erb (65.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (118.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 815ms (Views: 304.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:27 +0400
+
+
+Started POST "/user" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "user"=>{"name"=>"Another", "login"=>"Another", "email"=>"Another@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login" = 'Another' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'Another@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered shared/_error_messages.html.erb (1.2ms)
+  Rendered user/new.html.erb within layouts/application (4.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/_cart.html.erb (1.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 112ms (Views: 22.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:36:34 +0400
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-02-19 12:37:00 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (338.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/_cart.html.erb (95.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (160.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 650ms (Views: 629.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:37:01 +0400
+
+
+Started POST "/session" for 127.0.0.1 at 2014-02-19 12:37:06 +0400
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "session"=>{"email"=>"Struan", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'Struan' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."login" = 'Struan' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'struan.dirk.29@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 422 Unprocessable Entity in 225ms
+
+ActiveRecord::RecordInvalid (Validation failed: Password confirmation doesn't match Password):
+  app/helpers/session_helper.rb:7:in `sign_in'
+  app/controllers/session_controller.rb:23:in `create'
+
+
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/carefreeslacker/.rvm/gems/ruby-1.9.3-p484@snowflow/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login" = 'New_user1' AND "users"."id" != 3) LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."email" = 'new@gmail.com' AND "users"."id" != 3) LIMIT 1
+  [1m[36mSQL (33.5ms)[0m  [1mUPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["remember_token", 1234], ["updated_at", Wed, 19 Feb 2014 08:38:15 UTC +00:00]]
+  [1m[35m (134.0ms)[0m  commit transaction
+
+
+Started POST "/session" for 127.0.0.1 at 2014-02-19 12:39:29 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "session"=>{"email"=>"Struan", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'Struan' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."login" = 'Struan' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'struan.dirk.29@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (8.1ms)[0m  UPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["remember_token", "beaaf459693ad0096e73a8b9640ffa02cac8bb33"], ["updated_at", Wed, 19 Feb 2014 08:39:29 UTC +00:00]]
+  [1m[36m (131.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)[0m  [["created_at", Wed, 19 Feb 2014 08:39:30 UTC +00:00], ["updated_at", Wed, 19 Feb 2014 08:39:30 UTC +00:00], ["user_id", 1]]
+  [1m[35m (134.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 624ms (ActiveRecord: 275.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (27.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'beaaf459693ad0096e73a8b9640ffa02cac8bb33' LIMIT 1[0m
+  [1m[35mCart Load (0.4ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 130]]
+  [1m[35mPosition Load (0.2ms)[0m  SELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 130]]
+  Rendered shared/_cart.html.erb (12.3ms)
+  Rendered layouts/_header.html.erb (18.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 180ms (Views: 178.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:30 +0400
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered shared/_cart.html.erb (4.7ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (8.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 52.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:39:36 +0400
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-02-19 12:39:38 +0400
+Processing by UserController#new as HTML
+  Rendered shared/_error_messages.html.erb (1.2ms)
+  Rendered user/new.html.erb within layouts/application (336.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered shared/_cart.html.erb (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (8.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 393ms (Views: 389.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+Processing by UserController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VpkSE07G0YB6xCSxilvu3qa2OrUB0NWh22+xf3vUWxs=", "user"=>{"name"=>"Else", "login"=>"Else", "email"=>"Else@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login" = 'Else' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'Else@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered shared/_error_messages.html.erb (1.6ms)
+  Rendered user/new.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered shared/_cart.html.erb (1.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 121ms (Views: 22.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:40:00 +0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-19 12:51:34 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (23.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/_cart.html.erb (114.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (284.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 763ms (Views: 722.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:36 +0400
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (468.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1
+  Rendered shared/_cart.html.erb (1.3ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'da39a3ee5e6b4b0d3255bfef95601890afd80709' LIMIT 1[0m
+  Rendered layouts/_header.html.erb (6.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 492ms (Views: 489.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:38 +0400
+
+
+Started POST "/session" for 127.0.0.1 at 2014-02-19 12:51:43 +0400
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cys9+ja5rKpYP4RXHftFAbn2HTyDEA8RFJHBblDZcXA=", "session"=>{"email"=>"Struan", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."login" = 'Struan' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."login" = 'Struan' AND "users"."id" != 1) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."email" = 'struan.dirk.29@gmail.com' AND "users"."id" != 1) LIMIT 1[0m
+Binary data inserted for `string` type on column `remember_token`
+  [1m[35mSQL (23.7ms)[0m  UPDATE "users" SET "remember_token" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["remember_token", "74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1"], ["updated_at", Wed, 19 Feb 2014 08:51:44 UTC +00:00]]
+  [1m[36m (145.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)[0m  [["created_at", Wed, 19 Feb 2014 08:51:44 UTC +00:00], ["updated_at", Wed, 19 Feb 2014 08:51:44 UTC +00:00], ["user_id", 1]]
+  [1m[35m (114.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 479ms (ActiveRecord: 285.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1[0m
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mPosition Load (0.2ms)[0m  SELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  Rendered shared/_cart.html.erb (3.0ms)
+  Rendered layouts/_header.html.erb (8.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 63ms (Views: 59.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:51:44 +0400
+
+
+Started GET "/catalogue" for 127.0.0.1 at 2014-02-19 12:52:08 +0400
+Processing by ItemController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mSnowboard Load (0.2ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1[0m
+  Rendered shared/item_templates/_index_snowboard.html.erb (3.6ms)
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.8ms)
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.4ms)
+  [1m[35mHeaddress Load (0.3ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered shared/item_templates/_index_headdress.html.erb (2.1ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.6ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 11]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (2.3ms)
+  [1m[35mSnowboard Load (0.2ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.6ms)
+  Rendered item/index.html.erb within layouts/application (124.0ms)
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mPosition Load (0.1ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  Rendered shared/_cart.html.erb (4.3ms)
+  Rendered layouts/_header.html.erb (10.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 169ms (Views: 141.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/add_to_cart?item_id=2&item_type=Snowboard&quantity=1" for 127.0.0.1 at 2014-02-19 12:52:10 +0400
+Processing by CartsController#add_to_cart as HTML
+  Parameters: {"item_id"=>"2", "item_type"=>"Snowboard", "quantity"=>"1"}
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."good_id" = 2 AND "items"."good_type" = 'Snowboard' ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1[0m
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36mPosition Load (0.1ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "positions" ("cart_id", "created_at", "item_id", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["cart_id", 131], ["created_at", Wed, 19 Feb 2014 08:52:10 UTC +00:00], ["item_id", 2], ["quantity", 1], ["updated_at", Wed, 19 Feb 2014 08:52:10 UTC +00:00]]
+  [1m[35m (135.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/catalogue
+Completed 302 Found in 165ms (ActiveRecord: 137.5ms)
+
+
+Started GET "/catalogue" for 127.0.0.1 at 2014-02-19 12:52:10 +0400
+Processing by ItemController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1[0m
+  Rendered shared/item_templates/_index_snowboard.html.erb (1.9ms)
+  [1m[35mSnowboard Load (0.2ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.5ms)
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.5ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.6ms)
+  [1m[36mHeaddress Load (0.2ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[36mHeaddress Load (0.2ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.5ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 11]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.5ms)
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.6ms)
+  Rendered item/index.html.erb within layouts/application (31.2ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mPosition Load (0.1ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered shared/_cart.html.erb (4.6ms)
+  Rendered layouts/_header.html.erb (6.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 95.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/add_to_cart?item_id=1&item_type=Snowboard&quantity=1" for 127.0.0.1 at 2014-02-19 12:52:11 +0400
+Processing by CartsController#add_to_cart as HTML
+  Parameters: {"item_id"=>"1", "item_type"=>"Snowboard", "quantity"=>"1"}
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."good_id" = 1 AND "items"."good_type" = 'Snowboard' ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36mPosition Load (0.1ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "positions" ("cart_id", "created_at", "item_id", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["cart_id", 131], ["created_at", Wed, 19 Feb 2014 08:52:11 UTC +00:00], ["item_id", 1], ["quantity", 1], ["updated_at", Wed, 19 Feb 2014 08:52:11 UTC +00:00]]
+  [1m[35m (123.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/catalogue
+Completed 302 Found in 130ms (ActiveRecord: 123.9ms)
+
+
+Started GET "/catalogue" for 127.0.0.1 at 2014-02-19 12:52:11 +0400
+Processing by ItemController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1[0m
+  Rendered shared/item_templates/_index_snowboard.html.erb (2.2ms)
+  [1m[35mSnowboard Load (0.4ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.5ms)
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.6ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.7ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.9ms)
+  [1m[36mHeaddress Load (0.3ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[35mHeaddress Load (0.4ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.5ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 11]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.4ms)
+  [1m[35mSnowboard Load (0.2ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.5ms)
+  Rendered item/index.html.erb within layouts/application (37.3ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mPosition Load (0.1ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_cart.html.erb (5.1ms)
+  Rendered layouts/_header.html.erb (7.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 52.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/add_to_cart?item_id=10&item_type=Snowboard&quantity=1" for 127.0.0.1 at 2014-02-19 12:52:12 +0400
+Processing by CartsController#add_to_cart as HTML
+  Parameters: {"item_id"=>"10", "item_type"=>"Snowboard", "quantity"=>"1"}
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."good_id" = 10 AND "items"."good_type" = 'Snowboard' ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1[0m
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36mPosition Load (0.1ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "positions" ("cart_id", "created_at", "item_id", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["cart_id", 131], ["created_at", Wed, 19 Feb 2014 08:52:12 UTC +00:00], ["item_id", 8], ["quantity", 1], ["updated_at", Wed, 19 Feb 2014 08:52:12 UTC +00:00]]
+  [1m[35m (142.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/catalogue
+Completed 302 Found in 151ms (ActiveRecord: 143.5ms)
+
+
+Started GET "/catalogue" for 127.0.0.1 at 2014-02-19 12:52:12 +0400
+Processing by ItemController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1[0m
+  Rendered shared/item_templates/_index_snowboard.html.erb (2.1ms)
+  [1m[35mSnowboard Load (0.2ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.7ms)
+  [1m[36mSnowboard Load (0.2ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.7ms)
+  [1m[35mHeaddress Load (0.2ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.7ms)
+  [1m[36mHeaddress Load (0.2ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.6ms)
+  [1m[35mHeaddress Load (0.2ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[36mHeaddress Load (0.2ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/item_templates/_index_headdress.html.erb (1.1ms)
+  [1m[35mHeaddress Load (0.2ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.7ms)
+  [1m[36mHeaddress Load (0.2ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.7ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.6ms)
+  [1m[36mSnowboard Load (0.2ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 11]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (3.4ms)
+  [1m[35mSnowboard Load (0.2ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.7ms)
+  Rendered item/index.html.erb within layouts/application (45.2ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mPosition Load (0.1ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered shared/_cart.html.erb (7.6ms)
+  Rendered layouts/_header.html.erb (10.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 113ms (Views: 107.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/add_to_cart?item_id=3&item_type=Headdress&quantity=1" for 127.0.0.1 at 2014-02-19 12:52:13 +0400
+Processing by CartsController#add_to_cart as HTML
+  Parameters: {"item_id"=>"3", "item_type"=>"Headdress", "quantity"=>"1"}
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."good_id" = 3 AND "items"."good_type" = 'Headdress' ORDER BY "items"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1[0m
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36mPosition Load (0.2ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "positions" ("cart_id", "created_at", "item_id", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["cart_id", 131], ["created_at", Wed, 19 Feb 2014 08:52:13 UTC +00:00], ["item_id", 9], ["quantity", 1], ["updated_at", Wed, 19 Feb 2014 08:52:13 UTC +00:00]]
+  [1m[35m (133.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/catalogue
+Completed 302 Found in 144ms (ActiveRecord: 134.5ms)
+
+
+Started GET "/catalogue" for 127.0.0.1 at 2014-02-19 12:52:13 +0400
+Processing by ItemController#index as HTML
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1[0m
+  Rendered shared/item_templates/_index_snowboard.html.erb (1.5ms)
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.5ms)
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (0.9ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered shared/item_templates/_index_headdress.html.erb (1.4ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.8ms)
+  [1m[36mHeaddress Load (0.1ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 2]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.5ms)
+  [1m[35mHeaddress Load (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered shared/item_templates/_index_headdress.html.erb (0.4ms)
+  [1m[36mSnowboard Load (0.2ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 11]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (1.2ms)
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 12]]
+  Rendered shared/item_templates/_index_snowboard.html.erb (2.1ms)
+  Rendered item/index.html.erb within layouts/application (38.0ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mPosition Load (0.1ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered shared/_cart.html.erb (11.6ms)
+  Rendered layouts/_header.html.erb (14.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 65ms (Views: 60.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/carts/131/edit" for 127.0.0.1 at 2014-02-19 12:52:17 +0400
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"131"}
+  [1m[35mCart Load (0.3ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", "131"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1[0m
+  [1m[35mPosition Load (0.2ms)[0m  SELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mHeaddress Load (0.2ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1[0m  [["id", 3]]
+  Rendered carts/edit.html.erb within layouts/application (27.9ms)
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "headdresses".* FROM "headdresses" WHERE "headdresses"."id" = ? ORDER BY "headdresses"."id" ASC LIMIT 1  [["id", 3]]
+  Rendered shared/_cart.html.erb (8.8ms)
+  Rendered layouts/_header.html.erb (11.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 65ms (Views: 60.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/remove_position?position_id=140" for 127.0.0.1 at 2014-02-19 12:52:19 +0400
+Processing by CartsController#remove_position as HTML
+  Parameters: {"position_id"=>"140"}
+  [1m[36mPosition Load (0.4ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."id" = ? LIMIT 1[0m  [["id", 140]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "positions" WHERE "positions"."id" = ?[0m  [["id", 140]]
+  [1m[35m (153.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/carts/131/edit
+Completed 302 Found in 160ms (ActiveRecord: 154.7ms)
+
+
+Started GET "/carts/131/edit" for 127.0.0.1 at 2014-02-19 12:52:19 +0400
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"131"}
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "131"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1
+  [1m[36mPosition Load (0.2ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSnowboard Load (0.2ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mSnowboard Load (0.2ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered carts/edit.html.erb within layouts/application (18.3ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered shared/_cart.html.erb (5.7ms)
+  Rendered layouts/_header.html.erb (9.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 37.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/checkout" for 127.0.0.1 at 2014-02-19 12:52:20 +0400
+Processing by CartsController#checkout as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+Redirected to http://localhost:3000/orders/new?cart_id=131
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/orders/new?cart_id=131" for 127.0.0.1 at 2014-02-19 12:52:20 +0400
+Processing by OrdersController#new as HTML
+  Parameters: {"cart_id"=>"131"}
+  [1m[35mCart Load (0.4ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 131]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered orders/_form.html.erb (42.3ms)
+  Rendered orders/new.html.erb within layouts/application (44.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mPosition Load (0.1ms)[0m  SELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mSnowboard Load (0.2ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mSnowboard Load (0.1ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered shared/_cart.html.erb (8.4ms)
+  Rendered layouts/_header.html.erb (11.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 162ms (Views: 110.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:21 +0400
+
+
+Started GET "/carts/131/edit" for 127.0.0.1 at 2014-02-19 12:52:28 +0400
+Processing by CartsController#edit as HTML
+  Parameters: {"id"=>"131"}
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", "131"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1
+  [1m[36mPosition Load (0.2ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered carts/edit.html.erb within layouts/application (19.2ms)
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered shared/_cart.html.erb (4.6ms)
+  Rendered layouts/_header.html.erb (6.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 35.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+Processing by StaticController#home as HTML
+  Rendered static/home.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."remember_token" = '74a9390154ee7f5efb7813c6bb5bfa317eb4f3f1' LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ? ORDER BY "carts"."id" DESC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "positions" WHERE "positions"."cart_id" = ?  [["cart_id", 131]]
+  [1m[36mPosition Load (0.1ms)[0m  [1mSELECT "positions".* FROM "positions" WHERE "positions"."cart_id" = ?[0m  [["cart_id", 131]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mSnowboard Load (0.3ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mSnowboard Load (0.1ms)[0m  [1mSELECT "snowboards".* FROM "snowboards" WHERE "snowboards"."id" = ? ORDER BY "snowboards"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered shared/_cart.html.erb (9.3ms)
+  Rendered layouts/_header.html.erb (13.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/common.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/item.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/position.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/item.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/position.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-19 12:52:34 +0400

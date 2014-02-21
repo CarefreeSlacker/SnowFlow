@@ -29,7 +29,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/item/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="46" selection-start="143" selection-end="143" vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="252">
+            <state line="10" column="46" selection-start="380" selection-end="380" vertical-scroll-proportion="-0.6666667" vertical-offset="162" max-vertical-offset="432">
               <folding />
             </state>
           </provider>
@@ -38,16 +38,10 @@
       <file leaf-file-name="item_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/item_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="0" selection-start="2374" selection-end="2374" vertical-scroll-proportion="0.0" vertical-offset="1545" max-vertical-offset="2322">
+            <state line="143" column="0" selection-start="3903" selection-end="3903" vertical-scroll-proportion="0.0" vertical-offset="2499" max-vertical-offset="3294">
               <folding>
-                <marker date="1392990313863" expanded="true" signature="1770:1929" placeholder="case ... end" />
-                <marker date="1392990313863" expanded="true" signature="2105:2251" placeholder="if ... end" />
-                <marker date="1392990313863" expanded="true" signature="2403:2609" placeholder="do ... end" />
-                <marker date="1392990313863" expanded="true" signature="2404:2544" placeholder="do ... end" />
-                <marker date="1392990313863" expanded="true" signature="2416:2481" placeholder="if ... end" />
-                <marker date="1392990313863" expanded="true" signature="2815:2937" placeholder="if ... end" />
-                <marker date="1392990313863" expanded="true" signature="2835:2902" placeholder="if ... end" />
-                <marker date="1392990313863" expanded="true" signature="3175:3269" placeholder="case ... end" />
+                <marker date="1392991472359" expanded="true" signature="3448:3577" placeholder="case ... end" />
+                <marker date="1392991472359" expanded="true" signature="4606:4734" placeholder="if ... end" />
               </folding>
             </state>
           </provider>
@@ -65,7 +59,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="1" selection-start="498" selection-end="498" vertical-scroll-proportion="0.48758465" vertical-offset="108" max-vertical-offset="576">
+            <state line="25" column="7" selection-start="559" selection-end="559" vertical-scroll-proportion="0.7692308" vertical-offset="0" max-vertical-offset="585">
               <folding />
             </state>
           </provider>
@@ -500,10 +494,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-4" width="1303" height="773" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29925925" sideWeight="0.49880478" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.08888889" sideWeight="0.49880478" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.4996016" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -820,23 +814,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/item_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="0" selection-start="2374" selection-end="2374" vertical-scroll-proportion="0.0" vertical-offset="1545" max-vertical-offset="2322">
+        <state line="143" column="0" selection-start="3903" selection-end="3903" vertical-scroll-proportion="0.0" vertical-offset="2499" max-vertical-offset="3294">
           <folding>
-            <marker date="1392990313863" expanded="true" signature="1770:1929" placeholder="case ... end" />
-            <marker date="1392990313863" expanded="true" signature="2105:2251" placeholder="if ... end" />
-            <marker date="1392990313863" expanded="true" signature="2403:2609" placeholder="do ... end" />
-            <marker date="1392990313863" expanded="true" signature="2404:2544" placeholder="do ... end" />
-            <marker date="1392990313863" expanded="true" signature="2416:2481" placeholder="if ... end" />
-            <marker date="1392990313863" expanded="true" signature="2815:2937" placeholder="if ... end" />
-            <marker date="1392990313863" expanded="true" signature="2835:2902" placeholder="if ... end" />
-            <marker date="1392990313863" expanded="true" signature="3175:3269" placeholder="case ... end" />
+            <marker date="1392991472359" expanded="true" signature="3448:3577" placeholder="case ... end" />
+            <marker date="1392991472359" expanded="true" signature="4606:4734" placeholder="if ... end" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/item/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="46" selection-start="143" selection-end="143" vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="252">
+        <state line="10" column="46" selection-start="380" selection-end="380" vertical-scroll-proportion="-0.6666667" vertical-offset="162" max-vertical-offset="432">
           <folding />
         </state>
       </provider>
@@ -850,7 +838,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="1" selection-start="498" selection-end="498" vertical-scroll-proportion="0.48758465" vertical-offset="108" max-vertical-offset="576">
+        <state line="25" column="7" selection-start="559" selection-end="559" vertical-scroll-proportion="0.7692308" vertical-offset="0" max-vertical-offset="585">
           <folding />
         </state>
       </provider>

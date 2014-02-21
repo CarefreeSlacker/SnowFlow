@@ -1,0 +1,29 @@
+<%= form_tag @filter , url: '/catalogue' do |f| %>
+    <% item_list = Item.where(good_type: 'Snowboard') %>
+    <input type="hidden" id="items_type" name="items[type" value="Snowboard">
+    Deflection:
+    <select id="items_deflection" name="items[deflection]">
+      <option> <%= nil %> </option>
+      <% (1..10).each do |elem| %>
+          <option> <%= elem %> </option>
+      <% end %>
+    </select>
+    Manufacturer:
+    <select id="items_manufacturer" name="items[manufacturer]">
+      <option> <%= nil %> </option>
+      <% item_list.map{|elem| elem.good.manufacturer}.uniq.each do |elem| %>
+          <option> <%= elem %> </option>
+      <% end %>
+    </select>
+    Type:
+    <select id="items_form" name="items[form]">
+      <option> <%= nil %> </option>
+      <% item_list.map{|elem| if elem.good.class.to_s == 'Snowboard'
+                               elem.good.form
+                             end}.uniq.each do |elem| %>
+          <option> <%= elem %> </option>
+      <% end %>
+    </select>
+    <br>
+    <button value="Show" onclick="location.href=<%= '/catalogue?category=Snowboard' %>" > Search </button>
+<% end %>

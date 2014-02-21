@@ -1,0 +1,11 @@
+    <p>Choose category:
+    <ul class="horizont-list">
+      <% @categories.each do |elem| %>
+          <li><%= link_to elem.name, "/catalogue?page=1&category=#{elem.name}" %></li>
+      <% end %>
+    </ul>
+    </p>
+    <% if params[:category] %>
+        <%= render partial: (partial_helper  params[:category] , 'search') %>
+    <% end %>
+

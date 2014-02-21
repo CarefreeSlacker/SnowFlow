@@ -16,6 +16,11 @@
     <b><%= f.text_field :name , size: "20x1"%></b>
     <br>
     <br>
+    <%= f.label :picture %>
+    <%= image_tag(@item.picture_url) if @item.picture? %>
+    <%= f.file_field :picture %>
+    <%= f.hidden_field :picture%>
+    <br>
     <table>
 
       <tr>

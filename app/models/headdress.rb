@@ -1,4 +1,7 @@
 class Headdress < ActiveRecord::Base
+  #mounts
+  mount_uploader :picture, PictureUploader
+
   #propereties
   has_one :item, as: :good
   belongs_to :category

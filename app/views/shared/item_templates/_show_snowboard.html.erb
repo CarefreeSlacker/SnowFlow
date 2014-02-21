@@ -2,6 +2,10 @@
 
 <% item = item_reference.good %>
 <h1> <%= label_tag item.name %> </h1>
+<%= label_tag :picture %>
+<%= image_tag(item.picture_url) if item.picture? %>
+<%= file_field_tag :picture , item.picture %>
+<%= hidden_field_tag :picture , item.picture %>
 <table>
 
     <tr>

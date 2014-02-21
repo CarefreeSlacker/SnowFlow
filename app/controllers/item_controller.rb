@@ -116,7 +116,7 @@ class ItemController < ApplicationController
     #function those contains permitted params for any category
     def permitted_params(class_name)
       case class_name
-        when 'snowboard' then [:name, :manufacturer, :length, :price, :deflection, :form, :description]
+        when 'snowboard' then [:name, :manufacturer, :length, :price, :deflection, :form, :description,:picture]
         when 'headdress' then [:name, :manufacturer, :warmnes, :price, :collection, :matherial]
       end
     end

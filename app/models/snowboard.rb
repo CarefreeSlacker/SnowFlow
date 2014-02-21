@@ -1,5 +1,6 @@
 class Snowboard < ActiveRecord::Base
-  #one of goods
+  #mounts
+  mount_uploader :picture, PictureUploader
 
   #propereties
   has_one :item , as: :good

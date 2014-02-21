@@ -2,7 +2,8 @@
 <% item = item_reference.good %>
 <li>
   <hr>
-    <p><%= link_to item.name, item_path(item_reference) %>, Manufacturer: <%= item.manufacturer %>,
+    <p><%= image_tag(item.picture.small.url) if item.picture? %>
+      <%= link_to item.name, item_path(item_reference) %>, Manufacturer: <%= item.manufacturer %>,
       price: <%= item.price %>, <%= link_to 'Add to cart' ,
                                             add_to_cart_path + "?item_id=#{item.id}&item_type=#{item.class}&quantity=1" ,
                                             class: 'btn btn-large'%>

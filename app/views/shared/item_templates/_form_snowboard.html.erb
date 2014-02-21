@@ -1,4 +1,9 @@
-<%= form_for @item , url: {action: :create} do |f| %>
+<% if params[:action] = 'new' %>
+    <% action = :create %>
+<% else %>
+    <% action = :update %>
+<% end %>
+<%= form_for @item , url: {action: action} do |f| %>
     <% if @item.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@item.errors.count, "error") %> prohibited this order from being saved:</h2>
@@ -12,6 +17,17 @@
     <% end %>
 
     <%= f.hidden_field :type, value: "#{@item.class.to_s}"%>
+    <div class="field">
+      <%= f.label :picture %>
+      <%= image_tag(@item.picture_url) if @item.picture? %>
+      <%= f.file_field :picture %>
+      <%= f.hidden_field :picture%>
+      <% if @item.picture %>
+
+      <% else %>
+
+      <% end %>
+    </div>
 
     <div class="field">
       <%= f.label :name %>

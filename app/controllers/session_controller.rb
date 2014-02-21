@@ -17,7 +17,6 @@ class SessionController < ApplicationController
 
     #Checking for emptiness
     if !user.nil?
-
       #Checking password for validness
       if user.password == params[:session][:password]
         sign_in(user,params[:session][:password]) #added password because of dutyes of active record
@@ -26,7 +25,6 @@ class SessionController < ApplicationController
         render 'session/new'
       end
     else
-
       #if there isn't so email/login
       flash[:error] = "No user with email/login #{params[:session][:email]}"
       render 'session/new'

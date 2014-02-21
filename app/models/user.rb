@@ -9,7 +9,6 @@ class User < ActiveRecord::Base
 
   #Constants should be in the beginning, because of order of processing of the *.rb files
   EmailRegex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  SecretWord = 'chumbawamba'
 
   #encrypting the password
   #has_secure_password validations: false

@@ -13,7 +13,7 @@ class UserController < ApplicationController
 
   def create
     @user = User.new( user_params )
-    if @user.save
+    if @user.save && user_params[:password]
       sign_in(@user, user_params[:password])
       flash.now[:success] = "User #{user_params[:login]} has successfully created"
       redirect_to user_path(@user)
@@ -75,7 +75,7 @@ class UserController < ApplicationController
 
 
     def user_params
-      params.require(:user).permit(:name,:login,:email,:password, :password_confirmation)
+      params.require(:user).permit(:name,:login,:email,:password)
     end
 
     #def admin_filter

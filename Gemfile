@@ -12,6 +12,7 @@ gem 'thin'
 gem 'safe_attributes'
 gem 'actionmailer'
 gem 'polyglot' , '~> 0.3.4'
+#gem 'protected_attributes'
 
 
 # additional gem for using sql-queries in ActiveRecord

@@ -19,7 +19,7 @@ class SessionController < ApplicationController
     if !user.nil?
 
       #Checking password for validness
-      if(user.authenticate(params[:session][:password]))
+      if user.password == params[:session][:password]
         sign_in(user,params[:session][:password]) #added password because of dutyes of active record
         redirect_to root_path
       else

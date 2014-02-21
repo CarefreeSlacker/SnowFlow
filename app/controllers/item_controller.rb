@@ -63,7 +63,14 @@ class ItemController < ApplicationController
 
   def index
     #nothing special
-    @items = Item.all
+    params[:page] ||= 1
+    @categories = Category.all
+    @filter = Hash.new
+    if search_params
+      @items = filtred_items.paginate(per_page: 5 , page: params[:page])
+    else
+      @items = Item.where(items_category).paginate(per_page: 5 , page: params[:page])
+    end
   end
 
   private
@@ -120,4 +127,51 @@ class ItemController < ApplicationController
         when 'Headdress' then Headdress.new
       end
     end
+
+  def items_category
+    return_value = Hash.new
+    #searching for category
+    if params[:category]
+      return_value[:category_id] = Category.where(name: params[:category]).first.id
+    else
+      nil
+    end
+    return_value
+  end
+
+  def search_params
+    #lambda function for initiating permitted for search parameters
+    init_for_params = lambda do |param_list, where_list|
+      return_hash = Hash.new
+      param_list.map do |elem|
+        if where_list[elem] && where_list[elem].size != 0
+          return_hash[elem] = where_list[elem]
+        end
+      end
+      return_hash
+    end
+    #here are counted permitted for search parameters
+    permitted_search_params = Hash.new
+    permitted_search_params[:snowboard] = [:deflection, :manufacturer, :form]
+    permitted_search_params[:headdress] = [:manufacturer, :matherial, :warmnes, :collection]
+
+
+    if params[:items] #here program searches has search been requested
+      return_value = Hash.new
+      if params[:items][:type] #defining for returning value
+        return_value = init_for_params.call permitted_search_params[params[:items][:type].downcase.to_sym] , params[:items]
+      end
+    end
+    return_value
+  end
+
+  def filtred_items
+    elements = 1
+    case params[:items][:type]
+      when 'Snowboard' then elements = Snowboard.where(search_params)
+      when 'Headdress' then elements = Headdress.where(search_params)
+    end
+    elements = elements.map{|elem| elem.id}
+    elements = Item.where("good_type = '#{params[:items][:type]}' and good_id IN #{'(' + elements.join(',') + ')'}")
+  end
 end

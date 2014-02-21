@@ -11,6 +11,13 @@
  *= require_self
  *= require_tree .
  */
+div.search {
+  background-color: #36b2e7;
+  ul.horizont-list {
+    li{
+      display: inline;
+    }
+  }
+}
 
-@import 'bootstrap';
 

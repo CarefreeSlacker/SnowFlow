@@ -1,0 +1,33 @@
+<%= form_tag @filter , url: '/catalogue' do |f| %>
+    <input type="hidden" id="items_type" name="items[type" value="Headdress">
+    <% item_list = Item.where(good_type: 'Headdress') %>
+    Warmnes:
+    <select id="items_warmnes" name="items[warmnes]">
+      <option> <%= nil %> </option>
+      <% (1..10).each do |elem| %>
+          <option> <%= elem %> </option>
+      <% end %>
+    </select>
+    Collection:
+    <select id="items_manufacturer" name="items[manufacturer]">
+      <option> <%= nil %> </option>
+      <% item_list.map{|elem| elem.good.manufacturer}.uniq.each do |elem| %>
+          <option> <%= elem %> </option>
+      <% end %>
+    </select>
+    Type:
+    <select id="items_metherial" name="items[matherial]">
+      <option> <%= nil %> </option>
+      <% item_list.map{|elem| elem.good.matherial }.uniq.each do |elem| %>
+          <option> <%= elem %> </option>
+      <% end %>
+    </select>
+    <select id="items_collection" name="items[collection]">
+      <option> <%= nil %> </option>
+      <% item_list.map{|elem| elem.good.collection }.uniq.each do |elem| %>
+          <option> <%= elem %> </option>
+      <% end %>
+    </select>
+    <br>
+    <button value="Show" onclick="location.href=<%= '/catalogue?category=Headdress' %>" > Search </button>
+<% end %>

@@ -1,8 +1,18 @@
 <!-- Render special form for every of goods, named _index_"model_name".html.erb from shared/ -->
-<h1> Here you can see all our snowboards </h1>
+<h1> Here you can see all our <% if params[:category] %>
+      <%= pluralize( 20, params[:category]).delete('20') %>
+      <% else %>
+      Goods
+      <% end %></h1>
+<div class="search">
+  <%= render partial: 'shared/search' %>
+</div>
+
+<%= will_paginate @items , class: 'horizont-list' %>
 <ul class="content" >
   <% @items.each do |elem| %>
       <%= render partial: partial_helper(elem.good.class.to_s,'index') , locals: {item_reference: elem} %>
   <% end %>
 </ul>
+<%= will_paginate @items , class: 'horizont-list' %>
 

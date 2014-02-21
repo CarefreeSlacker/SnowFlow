@@ -22,6 +22,7 @@ SnowFlow::Application.routes.draw do
   #items routing
   resources :item, only: [:new, :update, :create, :destroy, :edit, :show ]
   get "/catalogue" => 'item#index'
+  post '/catalogue' => 'item#index'
 
 
   #cart routing

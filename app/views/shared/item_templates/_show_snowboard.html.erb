@@ -1,10 +1,11 @@
 <!-- show form for snowboards -->
 
+
 <% item = item_reference.good %>
 <h1> <%= label_tag item.name %> </h1>
 <%= label_tag :picture %>
-<%= image_tag(item.picture_url) if item.picture? %>
-<%= file_field_tag :picture , item.picture %>
+<%= image_tag(item.picture.big.url) if item.picture? %>
+
 <%= hidden_field_tag :picture , item.picture %>
 <table>
 
@@ -45,6 +46,9 @@
     <% if current_user.admin? %>
         <%= link_to 'Edit', edit_item_path(item_reference) , class: 'btn btn-large'%>
     <% end %>
+<% end %>
+<%= form_for item , url: {action: :show} do |f| %>
+    <%= f.file_field :picture %>
 <% end %>
 
 

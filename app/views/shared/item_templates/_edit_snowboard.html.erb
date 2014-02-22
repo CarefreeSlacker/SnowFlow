@@ -15,8 +15,15 @@
     <br>
     <b><%= f.text_field :name , size: "20x1"%></b>
     <br>
+    <div class="field">
+      <%= f.label :picture %><br>
+      <%= image_tag @item.picture.big.url if @item.picture %>
+      <%= f.file_field :picture %>
+      <%= f.hidden_field :picture_cache %>
+    </div>
     <br>
     <table>
+      <%= f.hidden_field :chumbawamba , value: 1 %>
 
       <tr>
         <td><%= f.label "Manufacturer"%></td>

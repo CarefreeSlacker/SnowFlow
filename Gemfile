@@ -13,6 +13,8 @@ gem 'safe_attributes'
 gem 'actionmailer'
 gem 'polyglot' , '~> 0.3.4'
 #gem 'protected_attributes'
+gem 'carrierwave'
+gem 'rmagick'
 
 
 # additional gem for using sql-queries in ActiveRecord

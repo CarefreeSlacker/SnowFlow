@@ -2,6 +2,9 @@
 
 <% item = item_reference.good %>
 <h1> <%= label_tag item.name %> </h1>
+<div class="field">
+  <%= image_tag item.picture.big.url if item.picture %>
+</div>
 <table>
 
     <tr>

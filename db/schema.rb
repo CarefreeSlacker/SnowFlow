@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140221161516) do
+ActiveRecord::Schema.define(version: 20140222183108) do
 
   create_table "carts", force: true do |t|
     t.integer  "user_id"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20140221161516) do
     t.string   "matherial"
     t.string   "collection"
     t.string   "name"
+    t.string   "picture"
   end
 
   create_table "items", force: true do |t|
@@ -95,6 +96,7 @@ ActiveRecord::Schema.define(version: 20140221161516) do
     t.datetime "updated_at"
     t.float    "price"
     t.integer  "category_id"
+    t.string   "picture"
   end
 
   add_index "snowboards", ["category_id"], name: "index_snowboards_on_category_id"
@@ -109,6 +111,7 @@ ActiveRecord::Schema.define(version: 20140221161516) do
     t.string   "role",            default: "customer"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar"
   end
 
 end

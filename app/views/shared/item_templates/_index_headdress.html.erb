@@ -1,12 +1,13 @@
 <% item = item_reference.good %>
-<li>
-  <hr>
-  <p><%= link_to item.name , item_path(item_reference) %>, Manufacturer: <%= item.manufacturer %>,
-    price: <%= item.price %>, <%= link_to 'Add to cart' ,
-                                          add_to_cart_path + "?item_id=#{item.id}&item_type=#{item.class}&quantity=1" ,
-                                          class: 'btn btn-large'%>
+<tr>
+  <td><%= image_tag item.picture.thumb.url if item.picture %></td>
+  <td><%= link_to item.name, item_path(item_reference) %></td>
+  <td><%= item.manufacturer %></td>
+  <td><%= item.price %></td>
+  <td><%= link_to 'Add to cart' , add_to_cart_path + "?item_id=#{item.id}&item_type=#{item.class}&quantity=1" ,
+                  class: 'btn btn-large'%>
     <% if !current_user.nil? && current_user.admin? %>
-        <%= link_to 'Destroy', item_path(item_reference), method: :delete %>
-    <% end %></p>
-  <hr>
-</li>
+        |<%= link_to 'Destroy', item_path(item_reference), method: :delete %>
+    <% end %>
+  </td>
+</tr>

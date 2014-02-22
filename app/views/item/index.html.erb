@@ -9,10 +9,17 @@
 </div>
 
 <%= will_paginate @items , class: 'horizont-list' %>
-<ul class="content" >
+<table>
+  <tr>
+    <td>Picture</td>
+    <td>Name</td>
+    <td>Manufacturer</td>
+    <td>Price</td>
+    <td></td>
+  </tr>
   <% @items.each do |elem| %>
       <%= render partial: partial_helper(elem.good.class.to_s,'index') , locals: {item_reference: elem} %>
   <% end %>
-</ul>
+</table>
 <%= will_paginate @items , class: 'horizont-list' %>
 

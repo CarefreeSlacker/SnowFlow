@@ -1,4 +1,9 @@
 class Snowboard < ActiveRecord::Base
+  #uploader
+  mount_uploader :picture , PictureUploader
+
+
+
   #one of goods
 
   #propereties

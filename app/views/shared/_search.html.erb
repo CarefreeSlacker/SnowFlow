@@ -3,6 +3,7 @@
       <% @categories.each do |elem| %>
           <li><%= link_to elem.name, "/catalogue?page=1&category=#{elem.name}" %></li>
       <% end %>
+          <li><%= link_to 'None', '/catalogue' %></li>
     </ul>
     </p>
     <% if params[:category] %>

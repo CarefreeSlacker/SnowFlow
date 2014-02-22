@@ -22,5 +22,7 @@ database.yml
 *~
 .project
 .DS_Store
-/.idea/
+.idea/*
 /secret
+public/*
+!public/*.html

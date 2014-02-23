@@ -3,8 +3,8 @@ class Item < ActiveRecord::Base
   #this model contains references to all goods
 
   #propereties
-  has_many :positions
-  belongs_to :good, polymorphic: true , dependent: :destroy #this option allows it
+  has_many :positions, dependent: :destroy
+  belongs_to :good, polymorphic: true  #this option allows it
   belongs_to :category
 
   #callbacks

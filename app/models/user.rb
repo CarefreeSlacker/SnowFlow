@@ -3,9 +3,9 @@ class User < ActiveRecord::Base
   #accessors
   #attr_accessible :name, :login, :email, :password #, :password_confirmation
   #propereties
-  has_many :carts
+  has_many :carts, dependent: :destroy
   has_many :positions, through: :carts
-  has_many :orders
+  has_many :orders, dependent: :destroy
 
   #Constants should be in the beginning, because of order of processing of the *.rb files
   EmailRegex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

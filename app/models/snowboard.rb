@@ -7,7 +7,7 @@ class Snowboard < ActiveRecord::Base
   #one of goods
 
   #propereties
-  has_one :item , as: :good
+  has_one :item , as: :good, dependent: :destroy
   belongs_to :category
 
   #callbacks

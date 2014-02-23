@@ -4,7 +4,7 @@ class Headdress < ActiveRecord::Base
 
 
   #propereties
-  has_one :item, as: :good
+  has_one :item, as: :good, dependent: :destroy
   belongs_to :category
 
 

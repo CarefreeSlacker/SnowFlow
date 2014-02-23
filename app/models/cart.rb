@@ -2,7 +2,7 @@ class Cart < ActiveRecord::Base
 
   #propereties
   belongs_to :user
-  has_many :positions
+  has_many :positions, dependent: :destroy
   belongs_to :order
 
 

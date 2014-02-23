@@ -1,55 +1,78 @@
+<table>
+    <tr>
+      <td class="left-col">
+        <p>
+          <strong>User:</strong>
+          <% user = User.find(@order.user_id) %>
+          <%= link_to user.name, user_path(user) %>
+        </p>
 
+        <p>
+          <strong>Country:</strong>
+          <%= @order.country %>
+        </p>
 
+        <p>
+          <strong>Region:</strong>
+          <%= @order.region %>
+        </p>
 
-<p>
-  <strong>User:</strong>
-  <% User.find(@order.user_id).name %>
-</p>
+        <p>
+          <strong>Post code:</strong>
+          <%= @order.post_code %>
+        </p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @order.country %>
-</p>
+        <p>
+          <strong>Lane:</strong>
+          <%= @order.lane %>
+        </p>
 
-<p>
-  <strong>Region:</strong>
-  <%= @order.region %>
-</p>
+        <p>
+          <strong>Home:</strong>
+          <%= @order.home %>
+        </p>
 
-<p>
-  <strong>Post code:</strong>
-  <%= @order.post_code %>
-</p>
+        <p>
+          <strong>Appartament:</strong>
+          <%= @order.appartament %>
+        </p>
 
-<p>
-  <strong>Lane:</strong>
-  <%= @order.lane %>
-</p>
+        <p>
+          <strong>Floor:</strong>
+          <%= @order.floor %>
+        </p>
 
-<p>
-  <strong>Home:</strong>
-  <%= @order.home %>
-</p>
+        <p>
+          <strong>Personal payment:</strong>
+          <%= @order.personal_payment %>
+        </p>
 
-<p>
-  <strong>Appartament:</strong>
-  <%= @order.appartament %>
-</p>
+        <p>
+          <strong>Shipped:</strong>
+          <%= @order.shipped %>
+        </p>
+      </td>
+      <td class="right-col">
+        <p>
+          <strong>Status:</strong>
+          <% if @order.done %>
+            <b class="done"> done </b>
+          <% else %>
+            <b class="processing"> processing </b>
+          <% end %>
+        </p>
+        <%= render 'carts/show' %>
+      </td>
+    </tr>
+</table>
 
-<p>
-  <strong>Floor:</strong>
-  <%= @order.floor %>
-</p>
+<% if current_user.admin? %>
+    <%= form_for @order, url: {action: :update} do |f| %>
+        <%= f.label :make_it_done %>
+        <%= f.check_box :done %><br>
+        <%= f.submit 'Submit' %>
+    <% end %>
+    <%= link_to 'Edit', edit_order_path(@order) %> |
+<% end %>
 
-<p>
-  <strong>Personal payment:</strong>
-  <%= @order.personal_payment %>
-</p>
-
-<p>
-  <strong>Shipped:</strong>
-  <%= @order.shipped %>
-</p>
-
-<%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

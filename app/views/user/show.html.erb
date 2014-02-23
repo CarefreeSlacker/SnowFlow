@@ -1,10 +1,50 @@
 
 <%= form_for @user, url: user_path.to_s  do |f| %>
-    <p> Name: <%= @user.name %> </p>
-    <p> Login: <%= @user.login %> </p>
-    <p> Email: <%= @user.email %> </p> <!--  _field :email %> </p> -->
-    <% if current_user.id == @user.id %>
-        <p> <%= link_to 'Edit your profile', edit_user_path(@user) %> </p>
-    <% end %>
+    <table>
+      <tr>
+        <td class="left-col">
+          <p> Name: <%= @user.name %> </p>
+          <p> Login: <%= @user.login %> </p>
+          <p> Email: <%= @user.email %> </p> <!--  _field :email %> </p> -->
+          <% if current_user.id == @user.id %>
+              <p> <%= link_to 'Edit your profile', edit_user_path(@user) %> </p>
+          <% end %>
+        </td>
+        <td class="right-col">
+          <% if @orders && (current_user == @user || current_user.admin? ) %>
+            <% n = 1 %>
+            <b> You have <%= pluralize @orders.size , 'order' %></b>
+            <table>
+              <tr>
+                <th>№</th>
+                <th>Total positions:</th>
+                <th>Total price:</th>
+                <th>Status:</th>
+              </tr>
+              <% @orders.each do |elem| %>
+                  <% if elem.cart %>
+                      <tr>
+                        <td> Order #<%= elem.id %></td>
+                        <td> <%= link_to 'Positions: ' + elem.cart.get_total_positions.to_s +
+                                 ', items: ' + elem.cart.get_total_items.to_s + ' ', order_path(elem) %> </td>
+                        <td> <%= elem.cart.get_total_price %></td>
+                        <td> <% if elem.done %>
+                              <b class="done"> done </b>
+                          <% else %>
+                              <b class="processing"> processing </b>
+                          <% end %>
+                        </td>
+                      </tr>
+                  <% end %>
+              <% end %>
+            </table>
+            <div class="horizont-list">
+              <%= will_paginate @orders %>
+            </div>
+          <% end %>
+        </td>
+      </tr>
+    </table>
+
 
 <% end %>

@@ -1,17 +1,28 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
   before_action :signed_filter
-  before_action :admin_filter, only: [:index, :edit, :update, :destroy]
+  before_action :admin_filter, only: [:index,:edit,:update,  :destroy]
+  before_action :true_user , only: [:show]
 
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    params[:page] ||= 1
+    if params[:status]
+      if params[:status] == 'done'
+        @orders = Order.where(done: true).paginate(page: params[:page],per_page: 10)
+      else
+        @orders = Order.where(done: false).paginate(page: params[:page],per_page: 10)
+      end
+    else
+      @orders = Order.paginate(page: params[:page],per_page: 10)
+    end
   end
 
   # GET /orders/1
   # GET /orders/1.json
   def show
+    @cart = @order.cart
   end
 
   # GET /orders/new
@@ -82,6 +93,14 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:cart_id, :user_id, :country, :region, :city , :post_code, :lane, :home, :appartament, :floor, :personal_payment, :shipped)
+      params.require(:order).permit(:cart_id, :user_id, :country, :region, :city , :post_code, :lane, :home, :appartament, :floor, :personal_payment, :shipped, :done )
+    end
+
+    def true_user
+      if @order.user == current_user || current_user.admin?
+        true
+      else
+        render 'shared/error_303'
+      end
     end
 end

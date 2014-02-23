@@ -1,3 +1,22 @@
 // Place all the styles related to the Orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.done {
+  background-color: #26ff26;
+}
+
+.processing {
+  background-color: #fb9978;
+}
+
+.left-col {
+  width: 250px;
+}
+
+.right-col{
+  vertical-aligh: top;
+  vertical-position: top;
+}

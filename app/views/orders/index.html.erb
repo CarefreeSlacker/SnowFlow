@@ -1,47 +1,52 @@
 <h1>Listing orders</h1>
+<div class="horizont-list">
+  Status:
+  <ul>
+    <li><%= link_to 'All' , '/orders' %></li>
+    <li><%= link_to 'Done' , '/orders?status=done' %></li>
+    <li><%= link_to 'Undone' , '/orders?status=undone' %></li>
+  </ul>
+</div>
+<br>
+<div class="horizont-list">
+  <%= will_paginate @orders , class: 'Horizont-list' %>
+</div>
 
+<br>
 <table>
   <thead>
     <tr>
       <th>Cart</th>
       <th>User</th>
-      <th>Country</th>
-      <th>Region</th>
-      <th>Post code</th>
-      <th>Lane</th>
-      <th>Home</th>
-      <th>Appartament</th>
-      <th>Floor</th>
-      <th>Personal payment</th>
-      <th>Shipped</th>
+      <th>Order number</th>
       <th></th>
       <th></th>
       <th></th>
+      <th>Status</th>
     </tr>
   </thead>
 
   <tbody>
     <% @orders.each do |order| %>
-      <tr>
+      <% if order.done %>
+          <% status = 'done' %>
+      <% else %>
+          <% status = 'processing' %>
+      <% end %>
+      <tr class="<%= status %>">
         <td><%= order.cart_id %></td>
-        <td><%= order.user_id %></td>
-        <td><%= order.country %></td>
-        <td><%= order.region %></td>
-        <td><%= order.post_code %></td>
-        <td><%= order.lane %></td>
-        <td><%= order.home %></td>
-        <td><%= order.appartament %></td>
-        <td><%= order.floor %></td>
-        <td><%= order.personal_payment %></td>
-        <td><%= order.shipped %></td>
+        <td><% user = User.find(order.user_id) %>
+          <%= link_to user.name , user_path(user) %></td>
+        <td><%= link_to 'Order #' + order.id.to_s , order_path(order) %></td>
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= status %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
-
-<%= link_to 'New Order', new_order_path %>
+<div class="horizont-list">
+  <%= will_paginate @orders , class: 'Horizont-list' %>
+</div>

@@ -49,6 +49,12 @@ class UserController < ApplicationController
   end
 
   def show
+    params[:page] ||= 1
+    if @user.orders
+      @orders = @user.orders.paginate(page: params[:page], per_page: 7)
+    else
+      @orders = nil
+    end
   end
 
 

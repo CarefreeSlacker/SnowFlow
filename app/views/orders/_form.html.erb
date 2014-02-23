@@ -15,10 +15,16 @@
   <% order_user = User.find(@order.user_id) %>
   <% user_name = order_user.name %>
   <% user_login = order_user.login %>
+  <% if @order.done %>
+        <% status = @order.done %>
+  <% else %>
+        <% status = false %>
+  <% end %>
 
   <!-- hidden fields for sending for cart_id and user_id -->
   <%= f.hidden_field :user_id %>
   <%= f.hidden_field :cart_id %>
+  <%= f.hidden_field :done , value: status %>
 
   <div class="field">
     <%= f.label :Customer_name %><br>

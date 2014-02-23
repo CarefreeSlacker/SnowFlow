@@ -57,6 +57,9 @@ class CartsController < ApplicationController
     redirect_to edit_cart_path
   end
 
+  def show
+  end
+
   private
     def cart_params
       params.require(:cart).permit(:positions[]) #positions[] - means that positions may be array

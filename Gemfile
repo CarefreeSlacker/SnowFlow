@@ -16,6 +16,16 @@ gem 'polyglot' , '~> 0.3.4'
 gem 'carrierwave'
 gem 'rmagick'
 
+#bootstrap
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+
+#rails g bootstrap:install
+#rails g bootstrap:layout application fixed
+#bootstrap and responsive. + body{padding-top: 60px;}
+#rails g bootstrap:themed articles -f
+
 
 # additional gem for using sql-queries in ActiveRecord
 gem 'arel'

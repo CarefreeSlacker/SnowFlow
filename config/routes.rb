@@ -32,6 +32,8 @@ SnowFlow::Application.routes.draw do
 
   resources :carts, only: [:edit, :update]
 
+  resources :admin
+
 
 
 

@@ -9,7 +9,7 @@
             <li><%= link_to 'Sign out', signout_path, method: :delete %></li>
             <li><%= link_to 'Profile' , user_path(current_user) %> </li>
             <% if current_user.admin? %>
-                <li><%= link_to 'New item', new_item_path %></li>
+                <li><%= link_to 'Administration', admin_path(current_user) %></li>
             <% end %>
        <% else %>
             <li> <%= link_to 'Sign in', signin_path %> </li>

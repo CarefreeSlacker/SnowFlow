@@ -53,15 +53,17 @@
         </p>
       </td>
       <td class="right-col">
-        <p>
-          <strong>Status:</strong>
-          <% if @order.done %>
-            <b class="done"> done </b>
-          <% else %>
-            <b class="processing"> processing </b>
-          <% end %>
-        </p>
-        <%= render 'carts/show' %>
+        <% if @cart %>
+            <p>
+              <strong>Status:</strong>
+              <% if @order.done %>
+                <b class="done"> done </b>
+              <% else %>
+                <b class="processing"> processing </b>
+              <% end %>
+            </p>
+            <%= render 'carts/show' %>
+        <% end %>
       </td>
     </tr>
 </table>

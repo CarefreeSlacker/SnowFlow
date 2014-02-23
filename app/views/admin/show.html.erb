@@ -1,0 +1,47 @@
+
+<%= form_for @user, url: user_path.to_s  do |f| %>
+    <table>
+      <tr>
+        <td class="left-col">
+          <p> Name: <%= @user.name %> </p>
+          <p> Login: <%= @user.login %> </p>
+          <p> Email: <%= @user.email %> </p> <!--  _field :email %> </p> -->
+          <% if current_user.id == @user.id %>
+              <p> <%= link_to 'Edit your profile', edit_user_path(@user) %> </p>
+          <% end %>
+        </td>
+        <td class="right-col">
+          Administrator actions:
+          <div name="users">
+            <strong>Users:</strong>
+            <ul>
+              <li><%= link_to 'Edit users' , user_index_path %></li>
+            </ul>
+          </div>
+          <div name="items">
+            <strong>Items:</strong>
+            <ul>
+              <li><%= link_to 'Edit items' , item_index_path %></li>
+              <li><%= link_to 'New item', new_item_path %></li>
+            </ul>
+          </div>
+          <div name="orders">
+            <strong>Orders:</strong>
+            <ul>
+              <li><%= link_to 'Edit orders' , orders_path %></li>
+            </ul>
+          </div>
+          <div name="admins">
+            <strong>Admins:</strong>
+            <ul>
+              <li><%= link_to 'Observe admins' , admin_index_path %></li>
+              <li><%= link_to 'Create new admin' , new_admin_path %></li>
+            </ul>
+          </div>
+
+        </td>
+      </tr>
+    </table>
+
+
+<% end %>

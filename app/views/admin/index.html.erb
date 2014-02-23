@@ -1,0 +1,12 @@
+
+<%= will_paginate @users , :class => 'horizont-list' %>
+<ul>
+<% @users.each do |user| %>
+    <li>
+      Login: <%= user.login %>
+      Name: <%= user.name %>
+      <%= link_to 'view', user_path(user) %>
+    </li>
+<% end %>
+</ul>
+<%= will_paginate @users , :class => 'horizont-list' %>

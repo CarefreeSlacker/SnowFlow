@@ -1,0 +1,26 @@
+<h3> Edit your profile </h3>
+<%= form_for @user, url: {action: :update } do |f| %>
+    <%= render 'shared/error_messages' %>
+    <div>
+      <table>
+        <tr>
+          <td>Name:</td>
+          <td><%= f.text_field :name %></td>
+        </tr>
+        <tr>
+          <td>Login:</td>
+          <td><%= f.text_field :login %></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><%= f.text_field :email %></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><%= f.password_field :password %></td>
+        </tr>
+      </table>
+    </div>
+    <%= f.submit 'Save changes' , class: "btn btn-large btn-primary" %>
+
+<% end %>

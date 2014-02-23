@@ -84,7 +84,5 @@ class UserController < ApplicationController
       params.require(:user).permit(:name,:login,:email,:password)
     end
 
-    #def admin_filter
-    #  render 'shared/error_303' unless current_user.admin?
-    #end
+
 end

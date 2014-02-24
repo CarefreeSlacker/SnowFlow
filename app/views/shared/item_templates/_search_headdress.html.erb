@@ -1,33 +1,51 @@
-<%= form_tag @filter , url: '/catalogue' do |f| %>
-    <input type="hidden" id="items_type" name="items[type" value="Headdress">
+<%= form_tag @filter , url: '/catalogue' , class: 'form-horizontal' do |f| %>
     <% item_list = Item.where(good_type: 'Headdress') %>
-    Warmnes:
-    <select id="items_warmnes" name="items[warmnes]">
-      <option> <%= nil %> </option>
-      <% (1..10).each do |elem| %>
-          <option> <%= elem %> </option>
-      <% end %>
-    </select>
-    Collection:
-    <select id="items_manufacturer" name="items[manufacturer]">
-      <option> <%= nil %> </option>
-      <% item_list.map{|elem| elem.good.manufacturer}.uniq.each do |elem| %>
-          <option> <%= elem %> </option>
-      <% end %>
-    </select>
-    Type:
-    <select id="items_metherial" name="items[matherial]">
-      <option> <%= nil %> </option>
-      <% item_list.map{|elem| elem.good.matherial }.uniq.each do |elem| %>
-          <option> <%= elem %> </option>
-      <% end %>
-    </select>
-    <select id="items_collection" name="items[collection]">
-      <option> <%= nil %> </option>
-      <% item_list.map{|elem| elem.good.collection }.uniq.each do |elem| %>
-          <option> <%= elem %> </option>
-      <% end %>
-    </select>
-    <br>
-    <button value="Show" onclick="location.href=<%= '/catalogue?category=Headdress' %>" > Search </button>
+    <div class="search row">
+        <div class="span1 control-group">
+            <label class="control-label">Warmnes:</label>
+            <div class="controls">
+              <select id="items_warmnes" name="items[warmnes]"  class="input-mini">
+                <option> <%= nil %> </option>
+                <% (1..10).each do |elem| %>
+                    <option> <%= elem %> </option>
+                <% end %>
+              </select>
+            </div>
+            <label class="control-label">Manufacturer: </label>
+            <div class="controls">
+              <select id="items_manufacturer" name="items[manufacturer]" class="input-medium" >
+                <option> <%= nil %> </option>
+                <% item_list.map{|elem| elem.good.manufacturer}.uniq.each do |elem| %>
+                    <option> <%= elem %> </option>
+                <% end %>
+              </select>
+            </div>
+        </div>
+        <div class="span1 offset2 control-group">
+            <label class="control-label">Type:</label>
+            <div class="controls">
+              <select id="items_metherial" name="items[matherial]" class="input-small">
+                <option> <%= nil %> </option>
+                <% item_list.map{|elem| elem.good.matherial }.uniq.each do |elem| %>
+                    <option> <%= elem %> </option>
+                <% end %>
+              </select>
+            </div>
+            <label class="control-label">Collection:</label>
+            <div class="controls">
+              <select id="items_collection" name="items[collection]" class="input-small">
+                <option> <%= nil %> </option>
+                <% item_list.map{|elem| elem.good.collection }.uniq.each do |elem| %>
+                    <option> <%= elem %> </option>
+                <% end %>
+              </select>
+            </div>
+        </div>
+        <div class="span1 offset2 control-group">
+          <button value="Show" onclick="location.href=<%= '/catalogue?category=Headdress' %>" class="controls"> Search </button>
+        </div>
+    </div>
+
+
+
 <% end %>

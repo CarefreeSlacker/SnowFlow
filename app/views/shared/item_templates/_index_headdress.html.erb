@@ -5,9 +5,9 @@
   <td><%= item.manufacturer %></td>
   <td><%= item.price %></td>
   <td><%= link_to 'Add to cart' , add_to_cart_path + "?item_id=#{item.id}&item_type=#{item.class}&quantity=1" ,
-                  class: 'btn btn-large'%>
+                  class: 'btn'%>
     <% if !current_user.nil? && current_user.admin? %>
-        |<%= link_to 'Destroy', item_path(item_reference), method: :delete %>
+        <%= link_to 'Destroy', item_path(item_reference), method: :delete , class: 'btn' %>
     <% end %>
   </td>
 </tr>

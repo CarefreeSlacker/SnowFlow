@@ -20,6 +20,7 @@ gem 'rmagick'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
+gem 'bootstrap-will_paginate'
 
 #rails g bootstrap:install
 #rails g bootstrap:layout application fixed

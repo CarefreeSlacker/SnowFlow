@@ -1,19 +1,8 @@
 <h1>Listing orders</h1>
 <div class="horizont-list">
-  Status:
-  <ul>
-    <li><%= link_to 'All' , '/orders' %></li>
-    <li><%= link_to 'Done' , '/orders?status=done' %></li>
-    <li><%= link_to 'Undone' , '/orders?status=undone' %></li>
-  </ul>
+  <%= will_paginate @orders , class: 'Horizont-list', renderer: WillPaginate::ActionView::LinkRenderer %>
 </div>
-<br>
-<div class="horizont-list">
-  <%= will_paginate @orders , class: 'Horizont-list' %>
-</div>
-
-<br>
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Cart</th>
@@ -29,10 +18,12 @@
     <% @orders.each do |order| %>
       <% if order.done %>
           <% status = 'done' %>
+          <% row_style = 'success' %>
       <% else %>
           <% status = 'processing' %>
+          <% row_style = 'error' %>
       <% end %>
-      <tr class="<%= status %>">
+      <tr class="<%= row_style %>">
         <td><%= order.cart_id %></td>
         <td><% user = User.find(order.user_id) %>
           <%= link_to user.name , user_path(user) %></td>
@@ -46,5 +37,5 @@
 </table>
 <br>
 <div class="horizont-list">
-  <%= will_paginate @orders , class: 'Horizont-list' %>
+  <%= will_paginate @orders , class: 'Horizont-list', renderer: WillPaginate::ActionView::LinkRenderer %>
 </div>

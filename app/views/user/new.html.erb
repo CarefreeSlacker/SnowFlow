@@ -1,7 +1,7 @@
 <%= form_for @user, url: {controller: :user, action: :create } do |f| %>
-    <%= render '/shared/error_messages' %>
+
     <br>
-    <div class="center">
+    <div class="span2 offset4">
       <div>
         <%= f.label :name %><br>
         <%= f.text_field :name %>
@@ -23,6 +23,9 @@
       </div>
 
       <br>
-      <%= f.submit 'Create my account', :class => 'btn btn-large'  %>
+      <div class="center">
+        <%= f.submit 'Create my account', :class => 'btn'  %>
+      </div>
+
     </div>
 <% end %>

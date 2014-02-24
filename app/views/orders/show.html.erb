@@ -1,80 +1,82 @@
-<table>
-    <tr>
-      <td class="left-col">
-        <p>
-          <strong>User:</strong>
-          <% user = User.find(@order.user_id) %>
-          <%= link_to user.name, user_path(user) %>
-        </p>
+<div class="row">
+  <div class="offset1 span2">
+    <p>
+      <strong>User:</strong>
+      <% user = User.find(@order.user_id) %>
+      <%= link_to user.name, user_path(user) %>
+    </p>
 
-        <p>
-          <strong>Country:</strong>
-          <%= @order.country %>
-        </p>
+    <p>
+      <strong>Country:</strong>
+      <%= @order.country %>
+    </p>
 
-        <p>
-          <strong>Region:</strong>
-          <%= @order.region %>
-        </p>
+    <p>
+      <strong>Region:</strong>
+      <%= @order.region %>
+    </p>
 
-        <p>
-          <strong>Post code:</strong>
-          <%= @order.post_code %>
-        </p>
+    <p>
+      <strong>Post code:</strong>
+      <%= @order.post_code %>
+    </p>
 
-        <p>
-          <strong>Lane:</strong>
-          <%= @order.lane %>
-        </p>
+    <p>
+      <strong>Lane:</strong>
+      <%= @order.lane %>
+    </p>
 
-        <p>
-          <strong>Home:</strong>
-          <%= @order.home %>
-        </p>
+    <p>
+      <strong>Home:</strong>
+      <%= @order.home %>
+    </p>
 
-        <p>
-          <strong>Appartament:</strong>
-          <%= @order.appartament %>
-        </p>
+    <p>
+      <strong>Appartament:</strong>
+      <%= @order.appartament %>
+    </p>
 
-        <p>
-          <strong>Floor:</strong>
-          <%= @order.floor %>
-        </p>
+    <p>
+      <strong>Floor:</strong>
+      <%= @order.floor %>
+    </p>
 
-        <p>
-          <strong>Personal payment:</strong>
-          <%= @order.personal_payment %>
-        </p>
+    <p>
+      <strong>Personal payment:</strong>
+      <%= @order.personal_payment %>
+    </p>
 
-        <p>
-          <strong>Shipped:</strong>
-          <%= @order.shipped %>
-        </p>
-      </td>
-      <td class="right-col">
-        <% if @cart %>
-            <p>
-              <strong>Status:</strong>
-              <% if @order.done %>
-                <b class="done"> done </b>
-              <% else %>
-                <b class="processing"> processing </b>
-              <% end %>
-            </p>
-            <%= render 'carts/show' %>
+    <p>
+      <strong>Shipped:</strong>
+      <%= @order.shipped %>
+    </p>
+    <% if current_user.admin? %>
+        <%= form_for @order, url: {action: :update} do |f| %>
+            <%= f.label :make_it_done %>
+            <%= f.check_box :done %><br>
+            <%= f.submit 'Submit' %>
         <% end %>
-      </td>
-    </tr>
-</table>
-
-<% if current_user.admin? %>
-    <%= form_for @order, url: {action: :update} do |f| %>
-        <%= f.label :make_it_done %>
-        <%= f.check_box :done %><br>
-        <%= f.submit 'Submit' %>
+        <%= link_to 'Edit', edit_order_path(@order) %> |
     <% end %>
-    <%= link_to 'Edit', edit_order_path(@order) %> |
-<% end %>
+    <%= link_to 'Back', orders_path %>
+  </div>
+  <div class="span6">
+    <% if @cart %>
+        <p>
+          <strong>Status:</strong>
+          <% if @order.done %>
+              <b class="done"> done </b>
+          <% else %>
+              <b class="processing"> processing </b>
+          <% end %>
+        </p>
+        <%= render 'carts/show' %>
+    <% end %>
+  </div>
 
-<%= link_to 'Back', orders_path %>
+</div>
+
+
+
+
+

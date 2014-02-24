@@ -1,5 +1,5 @@
 <%= form_tag @filter , url: '/catalogue' , class: 'form-horizontal' do |f| %>
-    <input type="hidden" id="items_type" name="items[type" value="Snowboard">
+    <input type="hidden" id="items_type" name="items[type]" value="Snowboard">
     <div class="search row">
       <% item_list = Item.where(good_type: 'Snowboard') %>
       <br>

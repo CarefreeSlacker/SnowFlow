@@ -1,4 +1,5 @@
-<%= form_for(@order) do |f| %>
+<%= form_for @order do |f| %>
+    <!-- here i should add 'form-horizontal' class to form -->
   <% if @order.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
@@ -26,53 +27,73 @@
   <%= f.hidden_field :cart_id %>
   <%= f.hidden_field :done , value: status %>
 
-  <div class="field">
+  <div class="control-group">
     <%= f.label :Customer_name %><br>
     <%= label_tag :user_name,  "#{user_name}" %>
   </div>
-  <div class="field">
+  <div class="control-group">
     <%= f.label :Customer_login %><br>
     <%= label_tag :user_login,  "#{user_login}" %>
   </div>
-  <div class="field">
-    <%= f.label :country %><br>
-    <%= f.text_field :country %>
-  </div>
-  <div class="field">
-    <%= f.label :region %><br>
-    <%= f.text_field :region %>
-  </div>
-    <div class="field">
-      <%= f.label :city %><br>
-      <%= f.text_field :city %>
+  <div class="control-group">
+    <%= f.label :country , class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :country %>
     </div>
-  <div class="field">
-    <%= f.label :post_code %><br>
-    <%= f.text_field :post_code %>
   </div>
-  <div class="field">
-    <%= f.label :lane %><br>
-    <%= f.text_field :lane %>
+  <div class="control-group">
+    <%= f.label :region , class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :region %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :home %><br>
-    <%= f.text_field :home %>
+    <div class="control-group">
+      <%= f.label :city , class: 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :city %>
+      </div>
+    </div>
+  <div class="control-group">
+    <%= f.label :post_code , class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :post_code %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :appartament %><br>
-    <%= f.text_field :appartament %>
+  <div class="control-group">
+    <%= f.label :lane , class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lane %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :floor %><br>
-    <%= f.number_field :floor %>
+  <div class="control-group">
+    <%= f.label :home , class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :home %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :personal_payment %><br>
-    <%= f.check_box :personal_payment %>
+  <div class="control-group">
+    <%= f.label :appartament , class: 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :appartament %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :shipped %><br>
-    <%= f.check_box :shipped %>
+  <div class="control-group">
+    <%= f.label :floor , class: 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :floor %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :personal_payment , class: 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :personal_payment %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :shipped , class: 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :shipped %>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit "Checkout" %>

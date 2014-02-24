@@ -5,7 +5,7 @@
     <p>Here is your cart </p>
     <% positions = 0 %>
     <% total_price = 0.0 %>
-    <table>
+    <table class="table table-bordered">
       <tr>
         <td><b>Position:</b></td>
         <td><b>Name:</b></td>
@@ -25,7 +25,7 @@
             <!-- Next element allow to send params[:position] = { {"Position_1.id" => "Position_1.quantity} ,{"Position_2.id" => "Position_2.quantity} , ...} -->
             <td><input  name="position[][<%= elem.id %>]" type="text" value="<%= elem.quantity %>" /> </td>
             <td><%= total_price += elem.quantity * item.price %></td>
-            <td><%= link_to "Delete" , remove_position_path + "?position_id=#{elem.id}" , class: 'btn btn-large' %></td>
+            <td><%= link_to "Delete" , remove_position_path + "?position_id=#{elem.id}" , class: 'btn' %></td>
           </tr>
       <% end %>
       <tr>
@@ -38,6 +38,6 @@
       </tr>
     </table>
 
-    <input type="button" value="Go to order registration" onclick="location.href='/checkout'" class="btn btn-large"> <!-- location.href='/checkout'" > -->
+    <input type="button" value="Go to order registration" onclick="location.href='/checkout'" class="btn"> <!-- location.href='/checkout'" > -->
 
 <% end %>

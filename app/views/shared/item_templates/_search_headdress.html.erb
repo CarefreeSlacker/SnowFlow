@@ -1,6 +1,8 @@
 <%= form_tag @filter , url: '/catalogue' , class: 'form-horizontal' do |f| %>
     <% item_list = Item.where(good_type: 'Headdress') %>
+    <input type="hidden" id="items_type" name="items[type]" value="Headdress">
     <div class="search row">
+      <br>
         <div class="span1 control-group">
             <label class="control-label">Warmnes:</label>
             <div class="controls">

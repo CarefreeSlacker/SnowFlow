@@ -1,4 +1,5 @@
 class ItemController < ApplicationController
+  layout 'layouts/item.html.erb'
   #filters
   before_filter :set_item, only: [:update , :destroy, :edit, :show ]
   before_filter :admin_filter, only: [:new,:create,:edit,:update,:destroy]
@@ -6,8 +7,8 @@ class ItemController < ApplicationController
 
   #actions
   def new
+    @categories = Category.all
     if params[:category].nil?
-      @categories = Category.all
       render 'new'
     else
       @item = smart_new
@@ -29,6 +30,7 @@ class ItemController < ApplicationController
   end
 
   def create
+    @categories = Category.all
     @item = smart_new_params
     respond_to do |format|
       if @item.save
@@ -41,7 +43,8 @@ class ItemController < ApplicationController
           render action: 'show', status: :created, location: @item
         end
       else
-        format.html { render action: 'new' }
+        params[:category] = @item.class.to_s
+        format.html { render action: 'special_new'  }
         format.json { render json: @item.errors, status: :unprocessable_entity }
       end
     end
@@ -79,6 +82,7 @@ class ItemController < ApplicationController
     def set_item
       #basicly for acces we use reference table - Item. those include references to any good in store
       @item = Item.find(params[:id])
+      @categories = Category.all
     end
 
     def smart_attributes

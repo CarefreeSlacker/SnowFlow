@@ -1,15 +1,22 @@
 
-<%= will_paginate @users , :class => 'horizont-list' %>
-<ul>
+<%= will_paginate @users , renderer: WillPaginate::ActionView::LinkRenderer %>
+<table class="table">
+  <tr>
+    <th>Login:</th>
+    <th>Name:</th>
+    <th>Action:</th>
+  </tr>
+
 <% @users.each do |user| %>
-    <li>
-      Login: <%= user.login %>
-      Name: <%= user.name %>
+    <tr>
+      <td><%= user.login %></td>
+      <td><%= user.name %></td>
+      <td>
       <%= link_to 'view', user_path(user) %>
         <% if current_user.admin? %>
              | <%= link_to 'delete', user_path(user), method: :delete %>
-            <% end %>
-    </li>
+            <% end %></td>
+    </tr>
 <% end %>
-</ul>
-<%= will_paginate @users , :class => 'horizont-list' %>
+</table>
+<%= will_paginate @users , renderer: WillPaginate::ActionView::LinkRenderer%>

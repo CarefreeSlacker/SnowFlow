@@ -1,7 +1,7 @@
 <h1>Listing orders</h1>
-<div class="horizont-list">
-  <%= will_paginate @orders , class: 'Horizont-list', renderer: WillPaginate::ActionView::LinkRenderer %>
-</div>
+
+<%= will_paginate @orders  %>
+
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -36,6 +36,6 @@
   </tbody>
 </table>
 <br>
-<div class="horizont-list">
-  <%= will_paginate @orders , class: 'Horizont-list', renderer: WillPaginate::ActionView::LinkRenderer %>
-</div>
+
+<%= will_paginate @orders  %>
+

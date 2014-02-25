@@ -32,6 +32,7 @@ class AdminController < ApplicationController
       flash[:success] = 'Changes have done'
       redirect_to admin_path
     else
+      flash.now[:error] = @user.errors.full_messages
       render 'admin/edit'
     end
   end

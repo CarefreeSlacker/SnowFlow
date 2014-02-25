@@ -1,7 +1,5 @@
 <%= form_for @user, url: { action: :create } do |f| %>
-    <%= render '/shared/error_messages' %>
-    <br>
-    <div class="center">
+    <div class="span1 offset4">
       <div>
         <%= f.label :name %><br>
         <%= f.text_field :name %>
@@ -26,6 +24,8 @@
       <%= f.hidden_field :role, value: 'admin' %>
 
       <br>
-      <%= f.submit 'Create my account', :class => 'btn btn-large'  %>
+        <%= f.submit 'Create new admin', :class => 'btn center'  %>
+
     </div>
+    <br>
 <% end %>

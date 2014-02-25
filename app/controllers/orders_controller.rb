@@ -59,6 +59,7 @@ class OrdersController < ApplicationController
           render action: 'show', status: :created, location: @order
           end
       else
+        flash.now[:error] = @order.errors.full_messages
         format.html { render action: 'new' }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
@@ -73,6 +74,7 @@ class OrdersController < ApplicationController
         format.html { redirect_to @order, notice: 'Order was successfully updated.' }
         format.json { head :no_content }
       else
+        flash.now[:error] = @order.errors.full_messages
         format.html { render action: 'edit' }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end

@@ -33,6 +33,7 @@ class UserController < ApplicationController
       flash[:success] = 'Changes have done'
       redirect_to user_path
     else
+      flash.now[:error] = @user.errors.full_messages
       render 'user/edit'
     end
   end

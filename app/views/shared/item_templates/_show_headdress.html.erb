@@ -5,7 +5,8 @@
 <div class="field">
   <%= image_tag item.picture.big.url if item.picture %>
 </div>
-<table>
+<div class="span3">
+<table class="table bordered-table">
 
   <tr>
     <td><%= label_tag "Manufacturer"%></td>
@@ -33,12 +34,13 @@
   </tr>
 
 </table>
+  <%= link_to 'Add to cart' , add_to_cart_path + "?item_id=#{item.id}&item_type=#{item.class}&quantity=1" , class: 'btn btn-success' %> <br>
+  <br>
+  <% if current_user %>
+      <% if current_user.admin? %>
+          <%= link_to 'Edit', edit_item_path(item_reference) , class: 'btn btn-primary'%>
+      <% end %>
+  <% end %>
+</div>
 
 
-<%= link_to 'Add to cart' , add_to_cart_path + "?item_id=#{item.id}&item_type=#{item.class}&quantity=1" , class: 'btn btn-large' %> <br>
-
-<% if current_user %>
-    <% if current_user.admin? %>
-        <%= link_to 'Edit', edit_item_path(item_reference) , class: 'btn btn-large'%>
-    <% end %>
-<% end %>

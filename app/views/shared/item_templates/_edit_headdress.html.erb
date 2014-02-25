@@ -1,17 +1,6 @@
 <!-- Edit form for headdresses -->
 <%= form_for @item , url: {action: :update} do |f| %>
     <br>
-    <% if @item.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
-
-          <ul>
-            <% @item.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
     <br>
     <b><%= f.text_field  :name , size: "20x1"%></b>
     <br>
@@ -54,7 +43,7 @@
     </table>
 
 
-    <input type="submit" class="btn btn-large" value="Save changes" >
+    <input type="submit" class="btn btn-primary" value="Save changes" >
     <br>
     <br>
 

@@ -24,6 +24,7 @@ class ItemController < ApplicationController
       redirect_to item_path(@item)
     else
       @item = @item.good
+      flash.now[:error] = @item.errors.full_messages
       render "shared/item_templates/_edit_#{@item.class.to_s.downcase}.html.erb"
     end
 
@@ -34,6 +35,7 @@ class ItemController < ApplicationController
     @item = smart_new_params
     respond_to do |format|
       if @item.save
+        flash.now[:success] = 'Item was successfully created'
         format.html do
           #item = Item.create(good: @item, category_id: @item.category.id)
           redirect_to item_path(@item.item), notice: 'New item was successfully created.'
@@ -44,6 +46,7 @@ class ItemController < ApplicationController
         end
       else
         params[:category] = @item.class.to_s
+        flash.now[:error] = @item.errors.full_messages
         format.html { render action: 'special_new'  }
         format.json { render json: @item.errors, status: :unprocessable_entity }
       end

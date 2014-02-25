@@ -10,7 +10,7 @@
   <% end %>
 <% end %>
 
-<%= will_paginate @items , class: 'pagination', renderer: WillPaginate::ActionView::LinkRenderer %>
+<%= will_paginate @items , class: 'pagination' %>
 <table class="table">
   <tr>
     <td>Picture</td>
@@ -23,5 +23,5 @@
       <%= render partial: partial_helper(elem.good.class.to_s,'index') , locals: {item_reference: elem} %>
   <% end %>
 </table>
-<%= will_paginate @items , class: 'pagination', renderer: WillPaginate::ActionView::LinkRenderer %>
+<%= will_paginate @items , class: 'pagination'%>
 
